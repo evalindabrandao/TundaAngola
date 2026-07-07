@@ -3,26 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tunda Angola — Onde a Beleza Lhe Dá as Boas-Vindas</title>
-    <link rel="stylesheet" href="../css/home.css">
+    <title>Tunda Angola — Turismo em Angola | Onde a Beleza Lhe Dá as Boas-Vindas</title>
+    <meta name="description" content="Tunda Angola — consultoria e curadoria de viagens em Angola. Descubra a Serra da Leba, as Quedas de Kalandula, o Namibe e muito mais. Planeie a sua aventura connosco.">
+    <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <script src="../javascript/home.js" defer></script>
+    <link rel="stylesheet" href="../css/global.css">
+    <script src="../javascript/global.js" defer></script>
+    <script src="../javascript/index.js" defer></script>
 </head>
 <body>
 
     <!-- NAV -->
     <nav class="nav" id="nav">
-        <div class="nav__logo">
-            <img src="../media/logo 1.png" alt="Tunda Angola">
-        </div>
+        <a href="index.html" class="nav__logo">
+            <img src="../media/logo.png" alt="Tunda Angola">
+        </a>
         <ul class="nav__links">
-            <li><a href="home.html" class="nav__link nav__link--active">Início</a></li>
+            <li><a href="index.html" class="nav__link nav__link--active">Início</a></li>
             <li><a href="sobreNos.html" class="nav__link">Sobre</a></li>
             <li><a href="servicos.html" class="nav__link">Serviços</a></li>
             <li><a href="destinos.html" class="nav__link">Destinos</a></li>
             <li><a href="blog.html" class="nav__link">Blog</a></li>
+            <li><a href="contactos.html" class="nav__link">Contactos</a></li>
             <li><a href="planeiaViagem.html" class="nav__cta">Planear Viagem</a></li>
         </ul>
         <button class="nav__burger" id="burger" aria-label="Menu">
@@ -33,11 +37,12 @@
     <!-- MOBILE MENU -->
     <div class="mobile-menu" id="mobileMenu">
         <ul>
-            <li><a href="home.html">Início</a></li>
+            <li><a href="index.html">Início</a></li>
             <li><a href="sobreNos.html">Sobre</a></li>
             <li><a href="servicos.html">Serviços</a></li>
             <li><a href="destinos.html">Destinos</a></li>
             <li><a href="blog.html">Blog</a></li>
+            <li><a href="contactos.html">Contactos</a></li>
             <li><a href="planeiaViagem.html">Planear Viagem</a></li>
         </ul>
     </div>
@@ -45,7 +50,7 @@
     <!-- HERO -->
     <section class="hero">
         <div class="hero__bg">
-            <img src="../media/fenda da tundavala.jpg" alt="Fenda da Tundavala, Angola" loading="eager">
+            <img src="../media/hero-angola.jpg" alt="Savana angolana ao pôr do sol" loading="eager" fetchpriority="high">
             <div class="hero__overlay"></div>
         </div>
 
@@ -90,10 +95,10 @@
                     <option>Grupo (6+)</option>
                 </select>
             </div>
-            <button class="search__btn">
+            <a href="destinos.html" class="search__btn">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <span>Explorar</span>
-            </button>
+            </a>
         </div>
     </section>
 
@@ -281,10 +286,11 @@
             </div>
             <div class="newsletter__form">
                 <div class="newsletter__input-wrap">
-                    <input type="email" placeholder="O seu endereço de e-mail">
-                    <button>Subscrever</button>
+                    <input type="email" id="newsEmail" placeholder="O seu endereço de e-mail" autocomplete="email">
+                    <button id="newsBtn" type="button">Subscrever</button>
                 </div>
                 <p class="newsletter__note">Sem spam. Apenas Angola, da melhor forma.</p>
+                <p class="newsletter__msg" id="newsMsg" role="alert" hidden></p>
             </div>
         </div>
     </section>
@@ -292,13 +298,13 @@
     <!-- FOOTER -->
     <footer class="rodape">
         <div class="rodape__marca">
-            <img src="../media/logo 1.png" alt="Tunda Angola" class="rodape__logo">
+            <img src="../media/logo.png" alt="Tunda Angola" class="rodape__logo">
             <p class="rodape__tagline">Onde a beleza lhe dá as boas-vindas.</p>
             <div class="rodape__redes">
-                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@TundaAngola" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://twitter.com/TundaAngola" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.facebook.com/TundaAngola" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/TundaAngola" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
             </div>
             <p class="copyright">© 2026 <span>Eva_Brandao</span>. All Rights Reserved</p>
         </div>
@@ -306,11 +312,12 @@
         <div class="rodape__col">
             <h4>Explorar</h4>
             <ul>
-                <li><a href="home.html">Início</a></li>
+                <li><a href="index.html">Início</a></li>
                 <li><a href="sobreNos.html">Sobre Nós</a></li>
                 <li><a href="servicos.html">Serviços</a></li>
                 <li><a href="destinos.html">Destinos</a></li>
                 <li><a href="blog.html">Blog</a></li>
+                <li><a href="contactos.html">Contactos</a></li>
             </ul>
         </div>
 

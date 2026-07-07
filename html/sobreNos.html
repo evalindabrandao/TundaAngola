@@ -3,25 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Nós — Tunda Angola</title>
+    <title>Sobre Nós — Tunda Angola | A nossa história</title>
+    <meta name="description" content="Conheça o Tunda Angola: quem somos, a nossa missão, visão e valores. Uma plataforma criada por quem conhece Angola por dentro, para revelar o país ao mundo.">
     <link rel="stylesheet" href="../css/sobreNos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/global.css">
+    <script src="../javascript/global.js" defer></script>
+    <script src="../javascript/sobreNos.js" defer></script>
 </head>
 <body>
 
     <!-- NAV -->
     <nav class="nav" id="nav">
-        <div class="nav__logo">
-            <img src="../media/logo 1.png" alt="Tunda Angola">
-        </div>
+        <a href="index.html" class="nav__logo">
+            <img src="../media/logo.png" alt="Tunda Angola">
+        </a>
         <ul class="nav__links">
-            <li><a href="home.html" class="nav__link">Início</a></li>
+            <li><a href="index.html" class="nav__link">Início</a></li>
             <li><a href="sobreNos.html" class="nav__link nav__link--active">Sobre</a></li>
             <li><a href="servicos.html" class="nav__link">Serviços</a></li>
             <li><a href="destinos.html" class="nav__link">Destinos</a></li>
             <li><a href="blog.html" class="nav__link">Blog</a></li>
+            <li><a href="contactos.html" class="nav__link">Contactos</a></li>
             <li><a href="planeiaViagem.html" class="nav__cta">Planear Viagem</a></li>
         </ul>
         <button class="nav__burger" id="burger" aria-label="Menu">
@@ -31,11 +36,12 @@
 
     <div class="mobile-menu" id="mobileMenu">
         <ul>
-            <li><a href="home.html">Início</a></li>
+            <li><a href="index.html">Início</a></li>
             <li><a href="sobreNos.html">Sobre</a></li>
             <li><a href="servicos.html">Serviços</a></li>
             <li><a href="destinos.html">Destinos</a></li>
             <li><a href="blog.html">Blog</a></li>
+            <li><a href="contactos.html">Contactos</a></li>
             <li><a href="planeiaViagem.html">Planear Viagem</a></li>
         </ul>
     </div>
@@ -213,24 +219,25 @@
     <!-- FOOTER -->
     <footer class="rodape">
         <div class="rodape__marca">
-            <img src="../media/logo 1.png" alt="Tunda Angola" class="rodape__logo">
+            <img src="../media/logo.png" alt="Tunda Angola" class="rodape__logo">
             <p class="rodape__tagline">Onde a beleza lhe dá as boas-vindas.</p>
             <div class="rodape__redes">
-                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@TundaAngola" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://twitter.com/TundaAngola" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.facebook.com/TundaAngola" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/TundaAngola" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
             </div>
             <p class="copyright">© 2026 <span>Eva_Brandao</span>. All Rights Reserved</p>
         </div>
         <div class="rodape__col">
             <h4>Explorar</h4>
             <ul>
-                <li><a href="home.html">Início</a></li>
+                <li><a href="index.html">Início</a></li>
                 <li><a href="sobreNos.html">Sobre Nós</a></li>
                 <li><a href="servicos.html">Serviços</a></li>
                 <li><a href="destinos.html">Destinos</a></li>
                 <li><a href="blog.html">Blog</a></li>
+                <li><a href="contactos.html">Contactos</a></li>
             </ul>
         </div>
         <div class="rodape__col">
@@ -262,12 +269,5 @@
         </div>
     </footer>
 
-    <script>
-        const nav = document.getElementById('nav');
-        window.addEventListener('scroll', () => nav.classList.toggle('nav--scrolled', window.scrollY > 60));
-        const burger = document.getElementById('burger');
-        const mobileMenu = document.getElementById('mobileMenu');
-        burger.addEventListener('click', () => { burger.classList.toggle('open'); mobileMenu.classList.toggle('open'); });
-    </script>
 </body>
 </html>

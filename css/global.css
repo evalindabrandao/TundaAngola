@@ -1,0 +1,230 @@
+/* ============================================================
+   TUNDA ANGOLA — global.css
+   Estilos partilhados por TODAS as páginas:
+   · Logotipo (fundo transparente + legibilidade)
+   · Botão "Voltar ao topo"
+   · Interruptor de Modo Escuro (Dark Mode)
+   · Paleta do Modo Escuro (aplicada via [data-theme="dark"])
+   Carregar SEMPRE depois do CSS específico da página.
+   ============================================================ */
+
+/* ── LOGOTIPO ──────────────────────────────────────────────
+   O logo.png já tem fundo transparente. Uma sombra subtil
+   garante que as letras "TUNDA" (navy) se leem sobre o hero
+   escuro e sobre o menu claro. */
+.nav__logo img,
+.rodape__logo {
+    filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.35));
+}
+.nav__logo {
+    display: inline-flex;
+    align-items: center;
+}
+
+/* O botão sanduíche é branco — uma sombra subtil garante que se vê
+   sobre heros claros (céu/mar) em telemóvel. */
+.nav__burger { filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.45)); }
+.nav--scrolled .nav__burger { filter: none; }
+
+/* Garantir o menu responsivo em TODAS as páginas de forma uniforme:
+   abaixo de 900px esconde os links e mostra o botão sanduíche.
+   (global.css carrega por último, portanto vence.) */
+@media (max-width: 900px) {
+    .nav__links { display: none !important; }
+    .nav__burger { display: flex !important; }
+}
+
+/* ── BOTÃO "VOLTAR AO TOPO" ───────────────────────────────── */
+.back-to-top {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    width: 46px;
+    height: 46px;
+    border: none;
+    border-radius: 50%;
+    background: var(--orange, #FAA935);
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.22);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(16px);
+    transition: opacity .3s ease, transform .3s ease, background .3s ease, visibility .3s;
+    z-index: 1200;
+}
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.back-to-top:hover {
+    background: var(--orange-dark, #e8941f);
+    transform: translateY(-3px);
+}
+
+/* ── INTERRUPTOR DE MODO ESCURO ───────────────────────────── */
+.theme-toggle {
+    position: fixed;
+    left: 24px;
+    bottom: 24px;
+    width: 46px;
+    height: 46px;
+    border: none;
+    border-radius: 50%;
+    background: var(--navy, #0A1F44);
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.22);
+    transition: transform .3s ease, background .3s ease;
+    z-index: 1200;
+}
+.theme-toggle:hover { transform: translateY(-3px); }
+/* ícone alterna via JS (sol / lua) */
+
+/* ============================================================
+   MODO ESCURO
+   Remapeia os tokens de cor. Como a maioria dos componentes
+   usa var(--cream/--white/--text/…), remapear os tokens
+   converte o site inteiro. Sobrescritas pontuais tratam
+   superfícies com cor fixa (navy) que precisam continuar escuras.
+   ============================================================ */
+html[data-theme="dark"] {
+    /* tokens partilhados (home, sobre, serviços, contactos, blog, faq…) */
+    --cream:        #0f1826;
+    --cream-dark:   #17233a;
+    --white:        #16223b;
+    --navy:         #eaf0fb;   /* usado sobretudo como cor de texto/títulos */
+    --navy-light:   #dfe7f5;
+    --text:         #e7ecf5;
+    --text-muted:   #9fb0c8;
+    --border:       #2a3a56;
+    --shadow:       0 4px 24px rgba(0, 0, 0, 0.45);
+    --shadow-md:    0 8px 40px rgba(0, 0, 0, 0.55);
+    /* tokens próprios da página Destinos (nomes em PT) */
+    --creme:        #0f1826;
+    --creme-escuro: #17233a;
+    --branco:       #16223b;
+    --verde:        #eaf0fb;
+    --verde-suave:  #c9d6ee;
+    --borda:        #2a3a56;
+    --texto-muted:  #9fb0c8;
+    --sombra:       0 8px 32px rgba(0, 0, 0, 0.45);
+    --sombra-hover: 0 20px 50px rgba(0, 0, 0, 0.55);
+}
+
+html[data-theme="dark"] body {
+    background: #0f1826 !important;
+    color: #e7ecf5;
+}
+
+/* Superfícies claras fixas → escuras */
+html[data-theme="dark"] .rodape { background: #0c1422 !important; }
+
+/* ── Secções que JÁ são navy (fundo escuro + texto branco) ──
+   Remapeámos --navy→claro e --white→escuro, o que inverteria estas
+   secções. Restauramos os tokens LOCALMENTE aos valores originais:
+   assim mantêm o fundo escuro e o texto claro numa só regra
+   (corrige fundo E texto de uma vez). */
+html[data-theme="dark"] .legal-hero,
+html[data-theme="dark"] .blog-header,
+html[data-theme="dark"] .manifesto,
+html[data-theme="dark"] .cta-sobre,
+html[data-theme="dark"] .cta-final,
+html[data-theme="dark"] .cta-faq,
+html[data-theme="dark"] .artigo-cta,
+html[data-theme="dark"] .newsletter,
+html[data-theme="dark"] .servicos,
+html[data-theme="dark"] .aside-quote,
+html[data-theme="dark"] .s-detalhe--navy,
+html[data-theme="dark"] .cta-banner,
+html[data-theme="dark"] .mobile-menu,
+html[data-theme="dark"] .whatsapp-cta,
+html[data-theme="dark"] .mapa-link,
+html[data-theme="dark"] .sidebar-newsletter,
+html[data-theme="dark"] .btn-primary,
+html[data-theme="dark"] .nav__cta,
+html[data-theme="dark"] .btn-cta,
+html[data-theme="dark"] .btn-whatsapp,
+html[data-theme="dark"] .btn-submit,
+html[data-theme="dark"] .btn-next,
+html[data-theme="dark"] .btn-sidebar-cta,
+html[data-theme="dark"] .testemunhos__seta,
+html[data-theme="dark"] .cat-btn--active,
+html[data-theme="dark"] .p-step--done {
+    --navy: #101b2e;
+    --navy-light: #16223b;
+    --verde: #101b2e;
+    --verde-suave: #16223b;
+    --white: #ffffff;
+    --branco: #ffffff;
+}
+
+/* Inputs e campos de formulário */
+html[data-theme="dark"] input,
+html[data-theme="dark"] textarea,
+html[data-theme="dark"] select,
+html[data-theme="dark"] .field-input {
+    background: #17233a !important;
+    color: #e7ecf5 !important;
+    border-color: #2a3a56 !important;
+}
+html[data-theme="dark"] input::placeholder,
+html[data-theme="dark"] textarea::placeholder { color: #7f90a8; }
+
+/* Navbar: escura ao rolar; nas páginas legais o fundo é sempre sólido */
+html[data-theme="dark"] .nav--scrolled { background: rgba(15,24,38,.97) !important; }
+html[data-theme="dark"] .pagina-legal .nav { background: rgba(15,24,38,.97) !important; }
+html[data-theme="dark"] .nav__link,
+html[data-theme="dark"] .nav--scrolled .nav__link { color: var(--text) !important; }
+
+/* Texto sobre imagens (heros) permanece claro no modo escuro,
+   mesmo com --white remapeado para superfície escura. */
+html[data-theme="dark"] .hero__content,
+html[data-theme="dark"] .hero__content .hero__title,
+html[data-theme="dark"] .hero__content .hero__subtitle,
+html[data-theme="dark"] .hero__content .hero__eyebrow,
+html[data-theme="dark"] .page-hero__content,
+html[data-theme="dark"] .page-hero__content .page-hero__title,
+html[data-theme="dark"] .page-hero__content .page-hero__sub,
+html[data-theme="dark"] .hero__inner,
+html[data-theme="dark"] .hero__inner .hero__title,
+html[data-theme="dark"] .showcase__content,
+html[data-theme="dark"] .showcase__content h2 { color: #fff; }
+html[data-theme="dark"] .hero__title em,
+html[data-theme="dark"] .page-hero__title em { color: var(--orange); }
+
+/* O logotipo tem letras navy — no escuro adicionamos brilho para leitura */
+html[data-theme="dark"] .nav__logo img,
+html[data-theme="dark"] .rodape__logo {
+    filter: brightness(0) invert(1) drop-shadow(0 1px 3px rgba(0,0,0,.5));
+}
+
+/* ── Destinos: barra de filtros (fundo fixo claro) → escuro ── */
+html[data-theme="dark"] .filtros {
+    background: rgba(15, 24, 38, 0.97) !important;
+    border-bottom-color: #2a3a56;
+}
+/* Botão de categoria ativo: pílula laranja legível sobre a barra escura */
+html[data-theme="dark"] .filtro-btn--active {
+    background: var(--orange);
+    border-color: var(--orange);
+    color: #0f1826;
+}
+
+/* ── Destinos: título do CTA final (usava --creme, ficava invisível) ── */
+html[data-theme="dark"] .cta-banner__texto h2 { color: #fff; }
+
+/* Reduz movimento para quem prefere */
+@media (prefers-reduced-motion: reduce) {
+    .back-to-top, .theme-toggle { transition: none; }
+    html { scroll-behavior: auto; }
+}

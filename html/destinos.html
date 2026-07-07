@@ -11,44 +11,48 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="../css/destinos.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <script src="../javascript/global.js" defer></script>
+    <script src="../javascript/destinos.js" defer></script>
 </head>
 <body>
 
     <!-- ═══ NAVBAR ═══ -->
     <nav class="nav" id="nav">
-        <a href="home.html" class="nav__logo">
-            <img src="../media/logo 1.png" alt="Tunda Angola">
+        <a href="index.html" class="nav__logo">
+            <img src="../media/logo.png" alt="Tunda Angola">
         </a>
         <ul class="nav__links">
-            <li><a href="home.html" class="nav__link">Início</a></li>
+            <li><a href="index.html" class="nav__link">Início</a></li>
             <li><a href="sobreNos.html" class="nav__link">Sobre</a></li>
-            <li><a href="destinos.html" class="nav__link nav__link--active">Destinos</a></li>
             <li><a href="servicos.html" class="nav__link">Serviços</a></li>
+            <li><a href="destinos.html" class="nav__link nav__link--active">Destinos</a></li>
             <li><a href="blog.html" class="nav__link">Blog</a></li>
             <li><a href="contactos.html" class="nav__link">Contactos</a></li>
+            <li><a href="planeiaViagem.html" class="nav__cta">Planear Viagem</a></li>
         </ul>
-        <a href="planeiaViagem.html" class="nav__cta">Planear Viagem</a>
-        <button class="nav__burger" id="burger" aria-label="Abrir menu">
+        <button class="nav__burger" id="burger" aria-label="Menu">
             <span></span><span></span><span></span>
         </button>
     </nav>
 
     <!-- ═══ MENU MOBILE ═══ -->
-    <div class="mobile-overlay" id="mobileOverlay"></div>
     <div class="mobile-menu" id="mobileMenu">
-        <a href="home.html">Início</a>
-        <a href="sobreNos.html">Sobre</a>
-        <a href="destinos.html">Destinos</a>
-        <a href="servicos.html">Serviços</a>
-        <a href="blog.html">Blog</a>
-        <a href="contactos.html">Contactos</a>
-        <a href="planeiaViagem.html" class="mobile-cta">Planear Viagem</a>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobreNos.html">Sobre</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="destinos.html">Destinos</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contactos.html">Contactos</a></li>
+            <li><a href="planeiaViagem.html">Planear Viagem</a></li>
+        </ul>
     </div>
 
     <!-- ═══ HERO ═══ -->
     <header class="hero">
         <div class="hero__bg">
-            <img src="../media/all tours.png " alt="Angola" loading="eager">
+            <img src="../media/all tours.png" alt="Paisagens de Angola" loading="eager">
             <div class="hero__overlay"></div>
         </div>
         <div class="hero__inner">
@@ -324,24 +328,25 @@
     <!-- ═══ FOOTER ═══ -->
     <footer class="rodape">
         <div class="rodape__marca">
-            <img src="../media/logo 1.png" alt="Tunda Angola" class="rodape__logo" loading="lazy">
+            <img src="../media/logo.png" alt="Tunda Angola" class="rodape__logo" loading="lazy">
             <p class="rodape__tagline">Onde a beleza lhe dá as boas-vindas.</p>
             <div class="rodape__redes">
-                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@TundaAngola" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://twitter.com/TundaAngola" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.facebook.com/TundaAngola" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/TundaAngola" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
             </div>
             <p class="copyright">© 2026 <span>Eva_Brandao</span>. All Rights Reserved</p>
         </div>
         <div class="rodape__col">
             <h4>Explorar</h4>
             <ul>
-                <li><a href="home.html">Início</a></li>
+                <li><a href="index.html">Início</a></li>
                 <li><a href="sobreNos.html">Sobre Nós</a></li>
-                <li><a href="destinos.html">Destinos</a></li>
                 <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="destinos.html">Destinos</a></li>
                 <li><a href="blog.html">Blog</a></li>
+                <li><a href="contactos.html">Contactos</a></li>
             </ul>
         </div>
         <div class="rodape__col">
@@ -372,105 +377,5 @@
             </a>
         </div>
     </footer>
-
-    <script>
-    (() => {
-        // ── Navbar scroll ──
-        const nav = document.getElementById('nav');
-        window.addEventListener('scroll', () => {
-            nav.classList.toggle('nav--scrolled', window.scrollY > 50);
-        }, { passive: true });
-
-        // ── Menu mobile ──
-        const burger = document.getElementById('burger');
-        const menu   = document.getElementById('mobileMenu');
-        const overlay= document.getElementById('mobileOverlay');
-
-        function fecharMenu() {
-            burger.classList.remove('open');
-            menu.classList.remove('open');
-            overlay.classList.remove('open');
-            document.body.style.overflow = '';
-        }
-
-        burger.addEventListener('click', () => {
-            const aberto = menu.classList.contains('open');
-            if (aberto) { fecharMenu(); }
-            else {
-                burger.classList.add('open');
-                menu.classList.add('open');
-                overlay.classList.add('open');
-                document.body.style.overflow = 'hidden';
-            }
-        });
-        overlay.addEventListener('click', fecharMenu);
-        document.addEventListener('keydown', e => { if (e.key === 'Escape') fecharMenu(); });
-
-        // ── Filtros + pesquisa ──
-        const cards       = document.querySelectorAll('.card[data-categoria]');
-        const filtros     = document.querySelectorAll('.filtro-btn[data-filter]');
-        const buscaInput  = document.getElementById('buscaInput');
-        const countEl     = document.getElementById('resultadosCount');
-        const semRes      = document.getElementById('semResultados');
-        const linhas      = document.querySelectorAll('.linha');
-        const resetBtn    = document.getElementById('resetBtn');
-
-        let filtroAtivo = 'all';
-        let termoBusca  = '';
-
-        function aplicarFiltros() {
-            let visiveis = 0;
-
-            cards.forEach(card => {
-                const cats  = card.dataset.categoria || '';
-                const nome  = (card.dataset.nome || '').toLowerCase();
-                const titulo = card.querySelector('.card__titulo')?.textContent.toLowerCase() || '';
-
-                const passaCategoria = filtroAtivo === 'all' || cats.includes(filtroAtivo);
-                const passaBusca     = !termoBusca || nome.includes(termoBusca) || titulo.includes(termoBusca);
-
-                if (passaCategoria && passaBusca) {
-                    card.classList.remove('card--oculto');
-                    visiveis++;
-                } else {
-                    card.classList.add('card--oculto');
-                }
-            });
-
-            // Ocultar linhas completamente vazias
-            linhas.forEach(linha => {
-                const temVisivel = [...linha.querySelectorAll('.card')].some(c => !c.classList.contains('card--oculto'));
-                linha.style.display = temVisivel ? '' : 'none';
-            });
-
-            countEl.textContent = visiveis === 1 ? '1 destino encontrado' : `${visiveis} destinos encontrados`;
-            semRes.style.display = visiveis === 0 ? 'flex' : 'none';
-        }
-
-        filtros.forEach(btn => {
-            btn.addEventListener('click', () => {
-                filtros.forEach(b => b.classList.remove('filtro-btn--active'));
-                btn.classList.add('filtro-btn--active');
-                filtroAtivo = btn.dataset.filter;
-                aplicarFiltros();
-            });
-        });
-
-        buscaInput.addEventListener('input', () => {
-            termoBusca = buscaInput.value.toLowerCase().trim();
-            aplicarFiltros();
-        });
-
-        resetBtn?.addEventListener('click', () => {
-            filtroAtivo = 'all';
-            termoBusca  = '';
-            buscaInput.value = '';
-            filtros.forEach(b => b.classList.remove('filtro-btn--active'));
-            document.querySelector('[data-filter="all"]').classList.add('filtro-btn--active');
-            aplicarFiltros();
-        });
-
-    })();
-    </script>
 </body>
 </html>

@@ -3,34 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contactos — Tunda Angola</title>
+    <title>Contactos — Tunda Angola | Fale connosco</title>
+    <meta name="description" content="Fale com o Tunda Angola. Envie-nos uma mensagem, ligue ou contacte-nos por WhatsApp. Respondemos em menos de 24 horas a todos os pedidos.">
     <link rel="stylesheet" href="../css/contactos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <script src="../javascript/contactos.js"></script>
+    <link rel="stylesheet" href="../css/global.css">
+    <script src="../javascript/global.js" defer></script>
+    <script src="../javascript/contactos.js" defer></script>
 </head>
 <body>
 
     <nav class="nav" id="nav">
-        <div class="nav__logo"><img src="../media/logo 1.png" alt="Tunda Angola"></div>
+        <a href="index.html" class="nav__logo"><img src="../media/logo.png" alt="Tunda Angola"></a>
         <ul class="nav__links">
-            <li><a href="home.html" class="nav__link">Início</a></li>
+            <li><a href="index.html" class="nav__link">Início</a></li>
             <li><a href="sobreNos.html" class="nav__link">Sobre</a></li>
             <li><a href="servicos.html" class="nav__link">Serviços</a></li>
             <li><a href="destinos.html" class="nav__link">Destinos</a></li>
             <li><a href="blog.html" class="nav__link">Blog</a></li>
+            <li><a href="contactos.html" class="nav__link nav__link--active">Contactos</a></li>
             <li><a href="planeiaViagem.html" class="nav__cta">Planear Viagem</a></li>
         </ul>
-        <button class="nav__burger" id="burger"><span></span><span></span><span></span></button>
+        <button class="nav__burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
     </nav>
     <div class="mobile-menu" id="mobileMenu">
         <ul>
-            <li><a href="home.html">Início</a></li>
+            <li><a href="index.html">Início</a></li>
             <li><a href="sobreNos.html">Sobre</a></li>
             <li><a href="servicos.html">Serviços</a></li>
             <li><a href="destinos.html">Destinos</a></li>
             <li><a href="blog.html">Blog</a></li>
+            <li><a href="contactos.html">Contactos</a></li>
             <li><a href="planeiaViagem.html">Planear Viagem</a></li>
         </ul>
     </div>
@@ -154,22 +159,23 @@
                 <div class="info-block">
                     <span class="section-label">Siga-nos</span>
                     <div class="redes">
-                        <a href="#" class="rede-btn"><i class="fa-brands fa-instagram"></i> Instagram</a>
-                        <a href="#" class="rede-btn"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
-                        <a href="#" class="rede-btn"><i class="fa-brands fa-youtube"></i> YouTube</a>
+                        <a href="https://www.instagram.com/TundaAngola" target="_blank" rel="noopener" class="rede-btn"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                        <a href="https://www.facebook.com/TundaAngola" target="_blank" rel="noopener" class="rede-btn"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+                        <a href="https://www.youtube.com/@TundaAngola" target="_blank" rel="noopener" class="rede-btn"><i class="fa-brands fa-youtube"></i> YouTube</a>
                     </div>
                 </div>
 
-                <!-- MAPA DISCRETO -->
-                <div class="mapa-placeholder">
-                    <div class="mapa-placeholder__inner">
-                        <i class="fa-solid fa-map-location-dot"></i>
-                        <p>Luanda, Angola</p>
-                        <span>Benfica · Atendimento por marcação</span>
-                        <a href="https://maps.google.com/?q=Benfica,Luanda,Angola" target="_blank" class="mapa-link">
-                            <i class="fa-solid fa-location-arrow"></i> Abrir no Google Maps
-                        </a>
-                    </div>
+                <!-- MAPA INTERATIVO (Google Maps embed) -->
+                <div class="mapa-embed">
+                    <iframe
+                        title="Localização — Benfica, Luanda, Angola"
+                        src="https://maps.google.com/maps?q=Benfica,Luanda,Angola&z=13&output=embed"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        allowfullscreen></iframe>
+                    <a href="https://maps.google.com/?q=Benfica,Luanda,Angola" target="_blank" rel="noopener" class="mapa-link">
+                        <i class="fa-solid fa-location-arrow"></i> Abrir no Google Maps
+                    </a>
                 </div>
             </aside>
 
@@ -179,24 +185,25 @@
     <!-- FOOTER -->
     <footer class="rodape">
         <div class="rodape__marca">
-            <img src="../media/logo 1.png" alt="Tunda Angola" class="rodape__logo">
+            <img src="../media/logo.png" alt="Tunda Angola" class="rodape__logo">
             <p class="rodape__tagline">Onde a beleza lhe dá as boas-vindas.</p>
             <div class="rodape__redes">
-                <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@TundaAngola" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://twitter.com/TundaAngola" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.facebook.com/TundaAngola" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/TundaAngola" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
             </div>
             <p class="copyright">© 2026 <span>Eva_Brandao</span>. All Rights Reserved</p>
         </div>
         <div class="rodape__col">
             <h4>Explorar</h4>
             <ul>
-                <li><a href="home.html">Início</a></li>
+                <li><a href="index.html">Início</a></li>
                 <li><a href="sobreNos.html">Sobre Nós</a></li>
                 <li><a href="servicos.html">Serviços</a></li>
                 <li><a href="destinos.html">Destinos</a></li>
                 <li><a href="blog.html">Blog</a></li>
+                <li><a href="contactos.html">Contactos</a></li>
             </ul>
         </div>
         <div class="rodape__col">

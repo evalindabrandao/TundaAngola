@@ -188,3 +188,9 @@ a{text-decoration:none;color:inherit}
     .rodape{grid-template-columns:1fr;padding:50px 24px}
     .rodape__marca{grid-column:span 1}
 }
+
+/* Aviso de validação (obriga a selecionar antes de avançar) */
+.step-error{display:flex;align-items:center;gap:8px;margin-top:20px;color:#e2574c;font-size:.9rem;font-weight:500}
+.step-error::before{content:'\26A0';font-size:1rem}
+.step-error--shake{animation:stepErrShake .4s ease}
+@keyframes stepErrShake{0%,100%{transform:translateX(0)}20%,60%{transform:translateX(-6px)}40%,80%{transform:translateX(6px)}}

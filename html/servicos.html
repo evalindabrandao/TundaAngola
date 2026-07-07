@@ -3,33 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serviços — Tunda Angola</title>
+    <title>Serviços — Tunda Angola | Consultoria, curadoria e logística de viagem</title>
+    <meta name="description" content="Os serviços do Tunda Angola: consultoria de viagem personalizada, curadoria de destinos e rotas, e suporte logístico local com guias certificados e 4×4.">
     <link rel="stylesheet" href="../css/servicos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/global.css">
+    <script src="../javascript/global.js" defer></script>
+    <script src="../javascript/servicos.js" defer></script>
 </head>
 <body>
 
     <nav class="nav" id="nav">
-        <div class="nav__logo"><img src="../media/logo 1.png" alt="Tunda Angola"></div>
+        <a href="index.html" class="nav__logo"><img src="../media/logo.png" alt="Tunda Angola"></a>
         <ul class="nav__links">
-            <li><a href="home.html" class="nav__link">Início</a></li>
+            <li><a href="index.html" class="nav__link">Início</a></li>
             <li><a href="sobreNos.html" class="nav__link">Sobre</a></li>
             <li><a href="servicos.html" class="nav__link nav__link--active">Serviços</a></li>
             <li><a href="destinos.html" class="nav__link">Destinos</a></li>
             <li><a href="blog.html" class="nav__link">Blog</a></li>
+            <li><a href="contactos.html" class="nav__link">Contactos</a></li>
             <li><a href="planeiaViagem.html" class="nav__cta">Planear Viagem</a></li>
         </ul>
-        <button class="nav__burger" id="burger"><span></span><span></span><span></span></button>
+        <button class="nav__burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
     </nav>
     <div class="mobile-menu" id="mobileMenu">
         <ul>
-            <li><a href="home.html">Início</a></li>
+            <li><a href="index.html">Início</a></li>
             <li><a href="sobreNos.html">Sobre</a></li>
             <li><a href="servicos.html">Serviços</a></li>
             <li><a href="destinos.html">Destinos</a></li>
             <li><a href="blog.html">Blog</a></li>
+            <li><a href="contactos.html">Contactos</a></li>
             <li><a href="planeiaViagem.html">Planear Viagem</a></li>
         </ul>
     </div>
@@ -37,7 +43,7 @@
     <!-- HERO -->
     <section class="page-hero">
         <div class="page-hero__bg">
-            <img src="../media/fenda da tundavala.jpg" alt="Tundavala" loading="eager">
+            <img src="../media/servicos-angola.jpg" alt="Miradouro da Lua, Angola" loading="eager">
             <div class="page-hero__overlay"></div>
         </div>
         <div class="page-hero__content">
@@ -181,6 +187,83 @@
         </div>
     </section>
 
+    <!-- SHOWCASE — imagem de alta qualidade -->
+    <section class="showcase" aria-label="Angola em imagem">
+        <div class="showcase__bg">
+            <img src="../media/servicos-hd.jpg" alt="Girafa na savana angolana ao pôr do sol" loading="lazy">
+        </div>
+        <div class="showcase__content">
+            <span class="showcase__eyebrow">A experiência Tunda</span>
+            <h2>Cada serviço nasce de um<br>amor genuíno por Angola.</h2>
+            <p>Da savana ao deserto, do planalto à costa — colocamos o mesmo cuidado em cada detalhe da sua viagem.</p>
+        </div>
+    </section>
+
+    <!-- TESTEMUNHOS -->
+    <section class="testemunhos">
+        <div class="testemunhos__header">
+            <span class="section-label">O que dizem de nós</span>
+            <h2>Histórias de quem<br>já apareceu.</h2>
+        </div>
+
+        <div class="testemunhos__carrossel" id="testemunhosCarrossel">
+            <div class="testemunhos__track" id="testemunhosTrack">
+
+                <figure class="testemunho">
+                    <div class="testemunho__estrelas" aria-label="5 estrelas">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <blockquote>A melhor experiência de viagem que já tive em Angola! Organização impecável do início ao fim — sentimo-nos seguros e livres para aproveitar cada momento.</blockquote>
+                    <figcaption>
+                        <div class="testemunho__avatar">M</div>
+                        <div>
+                            <strong>Mariana Sousa</strong>
+                            <span>Lisboa, Portugal · Rota da Serra da Leba</span>
+                        </div>
+                    </figcaption>
+                </figure>
+
+                <figure class="testemunho">
+                    <div class="testemunho__estrelas" aria-label="5 estrelas">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <blockquote>Os guias locais fizeram toda a diferença. Conheciam cada picada, cada história. As Quedas de Kalandula ao amanhecer foram algo que nunca vou esquecer.</blockquote>
+                    <figcaption>
+                        <div class="testemunho__avatar">J</div>
+                        <div>
+                            <strong>João Katchiungo</strong>
+                            <span>Luanda, Angola · Aventura em Malanje</span>
+                        </div>
+                    </figcaption>
+                </figure>
+
+                <figure class="testemunho">
+                    <div class="testemunho__estrelas" aria-label="5 estrelas">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <blockquote>Profissionalismo e atenção ao detalhe do outro mundo. Planearam tudo à nossa medida e responderam a cada dúvida em minutos. Recomendo de olhos fechados!</blockquote>
+                    <figcaption>
+                        <div class="testemunho__avatar">A</div>
+                        <div>
+                            <strong>Ana Ferreira</strong>
+                            <span>Porto, Portugal · Fotografia no Namibe</span>
+                        </div>
+                    </figcaption>
+                </figure>
+
+            </div>
+
+            <button class="testemunhos__seta testemunhos__seta--prev" id="testemunhoPrev" aria-label="Testemunho anterior">
+                <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <button class="testemunhos__seta testemunhos__seta--next" id="testemunhoNext" aria-label="Próximo testemunho">
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+
+        <div class="testemunhos__dots" id="testemunhosDots"></div>
+    </section>
+
     <!-- CTA -->
     <section class="cta-final">
         <div class="cta-final__inner">
@@ -196,24 +279,25 @@
     <!-- FOOTER -->
     <footer class="rodape">
         <div class="rodape__marca">
-            <img src="../media/logo 1.png" alt="Tunda Angola" class="rodape__logo">
+            <img src="../media/logo.png" alt="Tunda Angola" class="rodape__logo">
             <p class="rodape__tagline">Onde a beleza lhe dá as boas-vindas.</p>
             <div class="rodape__redes">
-                <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@TundaAngola" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://twitter.com/TundaAngola" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.facebook.com/TundaAngola" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/TundaAngola" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
             </div>
             <p class="copyright">© 2026 <span>Eva_Brandao</span>. All Rights Reserved</p>
         </div>
         <div class="rodape__col">
             <h4>Explorar</h4>
             <ul>
-                <li><a href="home.html">Início</a></li>
+                <li><a href="index.html">Início</a></li>
                 <li><a href="sobreNos.html">Sobre Nós</a></li>
                 <li><a href="servicos.html">Serviços</a></li>
                 <li><a href="destinos.html">Destinos</a></li>
                 <li><a href="blog.html">Blog</a></li>
+                <li><a href="contactos.html">Contactos</a></li>
             </ul>
         </div>
         <div class="rodape__col">
@@ -233,13 +317,5 @@
             <a href="contactos.html" class="btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> Falar no WhatsApp</a>
         </div>
     </footer>
-
-    <script>
-        const nav = document.getElementById('nav');
-        window.addEventListener('scroll', () => nav.classList.toggle('nav--scrolled', window.scrollY > 60));
-        const burger = document.getElementById('burger');
-        const mobileMenu = document.getElementById('mobileMenu');
-        burger.addEventListener('click', () => { burger.classList.toggle('open'); mobileMenu.classList.toggle('open'); });
-    </script>
 </body>
 </html>

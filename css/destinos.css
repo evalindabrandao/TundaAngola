@@ -373,12 +373,14 @@ body { font-family: 'Inter', sans-serif; background: var(--creme); color: var(--
    LINHAS EDITORIAIS
 ══════════════════════════════ */
 
-/* A: card-tall esquerda + coluna-dupla direita */
+/* A: card-tall esquerda + coluna-dupla direita
+   align-items:start evita que o card esticado deixe espaço em branco
+   interno — cada card assume a sua altura natural (compacto). */
 .linha--a {
     display: grid;
     grid-template-columns: 1.4fr 1fr;
     gap: 24px;
-    align-items: stretch;
+    align-items: start;
 }
 
 /* B: coluna-dupla esquerda + card-tall direita */
@@ -386,7 +388,7 @@ body { font-family: 'Inter', sans-serif; background: var(--creme); color: var(--
     display: grid;
     grid-template-columns: 1fr 1.4fr;
     gap: 24px;
-    align-items: stretch;
+    align-items: start;
 }
 
 /* C: três cards iguais */
@@ -435,12 +437,9 @@ body { font-family: 'Inter', sans-serif; background: var(--creme); color: var(--
 .card:hover .card__img-wrap img { transform: scale(1.06); }
 
 /* Alturas de imagem por variante */
-.card--tall .card__img-wrap  { height: 320px; }
+.card--tall .card__img-wrap  { height: 400px; }
 .card--mid  .card__img-wrap  { height: 180px; }
 .card--flat .card__img-wrap  { height: 200px; }
-
-/* Card-tall: altura total que preenche o espaço */
-.card--tall { flex: 1; }
 
 /* Badges */
 .card__badges {
@@ -752,3 +751,8 @@ body { font-family: 'Inter', sans-serif; background: var(--creme); color: var(--
     .rodape { grid-template-columns: 1fr; padding: 50px 20px; }
     .rodape__marca { grid-column: span 1; }
 }
+
+/* Menu mobile em estrutura <ul><li> (padronizado com as outras páginas) */
+.mobile-menu ul { list-style: none; display: flex; flex-direction: column; gap: 6px; width: 100%; }
+.mobile-menu li { width: 100%; }
+.mobile-menu li a { display: block; }

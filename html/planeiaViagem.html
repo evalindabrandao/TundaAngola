@@ -4,32 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planear Viagem — Tunda Angola</title>
+    <meta name="description" content="Planeie a sua viagem a Angola em poucos passos. Diga-nos o destino, as datas e o estilo de viagem — criamos um roteiro personalizado em 48 horas.">
     <link rel="stylesheet" href="../css/planeiaViagem.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/global.css">
 </head>
 <body>
 
     <nav class="nav" id="nav">
-        <div class="nav__logo"><img src="../media/logo 1.png" alt="Tunda Angola"></div>
+        <a href="index.html" class="nav__logo">
+            <img src="../media/logo.png" alt="Tunda Angola">
+        </a>
         <ul class="nav__links">
-            <li><a href="home.html" class="nav__link">Início</a></li>
+            <li><a href="index.html" class="nav__link">Início</a></li>
             <li><a href="sobreNos.html" class="nav__link">Sobre</a></li>
             <li><a href="servicos.html" class="nav__link">Serviços</a></li>
             <li><a href="destinos.html" class="nav__link">Destinos</a></li>
             <li><a href="blog.html" class="nav__link">Blog</a></li>
+            <li><a href="contactos.html" class="nav__link">Contactos</a></li>
             <li><a href="planeiaViagem.html" class="nav__cta nav__cta--active">Planear Viagem</a></li>
         </ul>
-        <button class="nav__burger" id="burger"><span></span><span></span><span></span></button>
+        <button class="nav__burger" id="burger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
     </nav>
     <div class="mobile-menu" id="mobileMenu">
         <ul>
-            <li><a href="home.html">Início</a></li>
+            <li><a href="index.html">Início</a></li>
             <li><a href="sobreNos.html">Sobre</a></li>
             <li><a href="servicos.html">Serviços</a></li>
             <li><a href="destinos.html">Destinos</a></li>
             <li><a href="blog.html">Blog</a></li>
+            <li><a href="contactos.html">Contactos</a></li>
             <li><a href="planeiaViagem.html">Planear Viagem</a></li>
         </ul>
     </div>
@@ -414,7 +422,7 @@
                 <div class="success-icon"><i class="fa-solid fa-check"></i></div>
                 <h2>Pedido enviado com sucesso!</h2>
                 <p>Recebemos a sua solicitação e entraremos em contacto em menos de 48 horas com uma proposta personalizada para a sua aventura em Angola.</p>
-                <a href="home.html" class="btn-primary">Voltar ao início</a>
+                <a href="index.html" class="btn-primary">Voltar ao início</a>
             </div>
 
         </div>
@@ -459,24 +467,25 @@
     <!-- FOOTER -->
     <footer class="rodape">
         <div class="rodape__marca">
-            <img src="../media/logo 1.png" alt="Tunda Angola" class="rodape__logo">
+            <img src="../media/logo.png" alt="Tunda Angola" class="rodape__logo">
             <p class="rodape__tagline">Onde a beleza lhe dá as boas-vindas.</p>
             <div class="rodape__redes">
-                <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@TundaAngola" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://twitter.com/TundaAngola" target="_blank" rel="noopener"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.facebook.com/TundaAngola" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/TundaAngola" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
             </div>
             <p class="copyright">© 2026 <span>Eva_Brandao</span>. All Rights Reserved</p>
         </div>
         <div class="rodape__col">
             <h4>Explorar</h4>
             <ul>
-                <li><a href="home.html">Início</a></li>
+                <li><a href="index.html">Início</a></li>
                 <li><a href="sobreNos.html">Sobre Nós</a></li>
                 <li><a href="servicos.html">Serviços</a></li>
                 <li><a href="destinos.html">Destinos</a></li>
                 <li><a href="blog.html">Blog</a></li>
+                <li><a href="contactos.html">Contactos</a></li>
             </ul>
         </div>
         <div class="rodape__col">
@@ -497,63 +506,7 @@
         </div>
     </footer>
 
-    <script>
-        // Nav scroll
-        const nav = document.getElementById('nav');
-        window.addEventListener('scroll', () => nav.classList.toggle('nav--scrolled', window.scrollY > 60));
-        const burger = document.getElementById('burger');
-        const mobileMenu = document.getElementById('mobileMenu');
-        burger.addEventListener('click', () => { burger.classList.toggle('open'); mobileMenu.classList.toggle('open'); });
-
-        // Multi-step form
-        let currentStep = 1;
-        const totalSteps = 6;
-        const steps = document.querySelectorAll('.form-step');
-        const pSteps = document.querySelectorAll('.p-step');
-        const btnPrev = document.getElementById('btnPrev');
-        const btnNext = document.getElementById('btnNext');
-        const btnSubmit = document.getElementById('btnSubmit');
-        const progressFill = document.getElementById('progressFill');
-
-        function updateUI() {
-            steps.forEach(s => s.classList.remove('active'));
-            document.querySelector(`.form-step[data-step="${currentStep}"]`).classList.add('active');
-            pSteps.forEach(s => {
-                s.classList.remove('p-step--active','p-step--done');
-                const n = parseInt(s.dataset.step);
-                if (n === currentStep) s.classList.add('p-step--active');
-                if (n < currentStep)  s.classList.add('p-step--done');
-            });
-            progressFill.style.width = `${((currentStep - 1) / (totalSteps - 1)) * 100}%`;
-            btnPrev.style.display  = currentStep === 1 ? 'none' : '';
-            btnNext.style.display  = currentStep === totalSteps ? 'none' : '';
-            btnSubmit.style.display = currentStep === totalSteps ? '' : 'none';
-        }
-
-        btnNext.addEventListener('click', () => { if (currentStep < totalSteps) { currentStep++; updateUI(); window.scrollTo({top:0,behavior:'smooth'}); } });
-        btnPrev.addEventListener('click', () => { if (currentStep > 1) { currentStep--; updateUI(); window.scrollTo({top:0,behavior:'smooth'}); } });
-
-        document.getElementById('planForm').addEventListener('submit', e => {
-            e.preventDefault();
-            document.getElementById('planForm').style.display = 'none';
-            document.querySelector('.progress-bar').style.display = 'none';
-            document.querySelector('.progress-steps').style.display = 'none';
-            document.getElementById('formSuccess').style.display = 'flex';
-        });
-
-        // Counter
-        const contadorVal = document.getElementById('contadorVal');
-        const numPessoas  = document.getElementById('numPessoas');
-        document.getElementById('btnMais').addEventListener('click', () => {
-            let v = parseInt(contadorVal.textContent);
-            if (v < 30) { v++; contadorVal.textContent = v; numPessoas.value = v; }
-        });
-        document.getElementById('btnMenos').addEventListener('click', () => {
-            let v = parseInt(contadorVal.textContent);
-            if (v > 1) { v--; contadorVal.textContent = v; numPessoas.value = v; }
-        });
-
-        updateUI();
-    </script>
+    <script src="../javascript/global.js" defer></script>
+    <script src="../javascript/planeiaViagem.js" defer></script>
 </body>
 </html>
