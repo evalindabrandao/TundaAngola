@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog — Tunda Angola</title>
+    <link rel="stylesheet" href="../css/blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="../javascript/blog.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="nav" id="nav">
+        <div class="nav__logo"><img src="../media/logo 1.png" alt="Tunda Angola"></div>
+        <ul class="nav__links">
+            <li><a href="home.html" class="nav__link">Início</a></li>
+            <li><a href="sobreNos.html" class="nav__link">Sobre</a></li>
+            <li><a href="servicos.html" class="nav__link">Serviços</a></li>
+            <li><a href="destinos.html" class="nav__link">Destinos</a></li>
+            <li><a href="blog.html" class="nav__link nav__link--active">Blog</a></li>
+            <li><a href="planeiaViagem.html" class="nav__cta">Planear Viagem</a></li>
+        </ul>
+        <button class="nav__burger" id="burger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="home.html">Início</a></li>
+            <li><a href="sobreNos.html">Sobre</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="destinos.html">Destinos</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="planeiaViagem.html">Planear Viagem</a></li>
+        </ul>
+    </div>
+
+    <!-- CABEÇALHO EDITORIAL — sem hero fullscreen, estilo jornal -->
+    <header class="blog-header">
+        <div class="blog-header__inner">
+            <div class="blog-header__topo">
+                <span class="blog-header__label">Diário de Bordo</span>
+                <span class="blog-header__data">Junho 2026 · Vol. 04</span>
+            </div>
+            <h1 class="blog-header__titulo">O Blog de quem<br>já <em>percorreu</em>.</h1>
+            <p class="blog-header__sub">Guias práticos, segredos de viagem e histórias do interior de Angola — escritos por quem conhece cada picada.</p>
+        </div>
+    </header>
+
+    <!-- ARTIGO PRINCIPAL — layout assimétrico editorial -->
+    <section class="artigo-principal">
+        <div class="artigo-principal__inner">
+            <a href="#" class="artigo-principal__card">
+                <div class="artigo-principal__img">
+                    <img src="../media/Serra da Leba.jpg" alt="Serra da Leba" loading="lazy">
+                </div>
+                <div class="artigo-principal__corpo">
+                    <div class="artigo-principal__topo">
+                        <span class="tag tag--destaque">Destinos</span>
+                        <span class="artigo-meta"><i class="fa-regular fa-clock"></i> 8 min de leitura</span>
+                    </div>
+                    <h2>Serra da Leba: o guia definitivo para visitar a estrada mais fotogénica de Angola</h2>
+                    <p>Das curvas em caracol que descem mil metros até ao Namibe, aos melhores pontos para fotografar o amanhecer. Um guia feito por quem já lá foi mais de vinte vezes.</p>
+                    <div class="artigo-principal__rodape">
+                        <div class="autor-pill">
+                            <div class="autor-pill__avatar">E</div>
+                            <div>
+                                <strong>Eva Brandão</strong>
+                                <span>14 Jun, 2026</span>
+                            </div>
+                        </div>
+                        <span class="ler-mais">Ler artigo <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- LINHA DIVISÓRIA EDITORIAL -->
+    <div class="divisor-editorial">
+        <span>Artigos recentes</span>
+    </div>
+
+    <!-- LISTA DE ARTIGOS — formato lista editorial, não grid de cards -->
+    <section class="artigos-lista">
+        <div class="artigos-lista__inner">
+
+            <!-- COLUNA PRINCIPAL -->
+            <div class="artigos-lista__principal">
+
+                <a href="#" class="artigo-linha" data-cat="fotografia">
+                    <div class="artigo-linha__num">01</div>
+                    <div class="artigo-linha__img">
+                        <img src="../media/fenda da tundavala.jpg" alt="Tundavala" loading="lazy">
+                    </div>
+                    <div class="artigo-linha__texto">
+                        <div class="artigo-linha__topo">
+                            <span class="tag">Fotografia</span>
+                            <span class="artigo-meta"><i class="fa-regular fa-calendar"></i> 10 Jun, 2026 · <i class="fa-regular fa-clock"></i> 6 min</span>
+                        </div>
+                        <h3>Como fotografar as cores surreais da Fenda da Tundavala ao entardecer</h3>
+                        <p>A hora certa, o equipamento ideal e as posições secretas para capturar a majestade desta fissura de 1.000 metros com a luz que lhe faz justiça.</p>
+                    </div>
+                    <div class="artigo-linha__seta"><i class="fa-solid fa-arrow-right"></i></div>
+                </a>
+
+                <a href="#" class="artigo-linha" data-cat="guias">
+                    <div class="artigo-linha__num">02</div>
+                    <div class="artigo-linha__img">
+                        <img src="../media/1.jpg" alt="Kalandula" loading="lazy">
+                    </div>
+                    <div class="artigo-linha__texto">
+                        <div class="artigo-linha__topo">
+                            <span class="tag">Guias Práticos</span>
+                            <span class="artigo-meta"><i class="fa-regular fa-calendar"></i> 05 Jun, 2026 · <i class="fa-regular fa-clock"></i> 10 min</span>
+                        </div>
+                        <h3>Quedas de Kalandula: tudo o que precisa saber antes de partir</h3>
+                        <p>Acesso, épocas do ano, alojamento próximo e os cuidados essenciais para uma visita segura às maiores quedas de Angola.</p>
+                    </div>
+                    <div class="artigo-linha__seta"><i class="fa-solid fa-arrow-right"></i></div>
+                </a>
+
+                <a href="#" class="artigo-linha" data-cat="seguranca">
+                    <div class="artigo-linha__num">03</div>
+                    <div class="artigo-linha__img">
+                        <img src="../media/How-to-do-a-Safari-in-Angola.jpg" alt="Segurança" loading="lazy">
+                    </div>
+                    <div class="artigo-linha__texto">
+                        <div class="artigo-linha__topo">
+                            <span class="tag">Segurança</span>
+                            <span class="artigo-meta"><i class="fa-regular fa-calendar"></i> 28 Mai, 2026 · <i class="fa-regular fa-clock"></i> 7 min</span>
+                        </div>
+                        <h3>É seguro viajar pelo interior de Angola? A resposta honesta que ninguém dá</h3>
+                        <p>Sem romantismos e sem alarmismo: o que realmente precisa de saber sobre segurança nas estradas do interior angolano.</p>
+                    </div>
+                    <div class="artigo-linha__seta"><i class="fa-solid fa-arrow-right"></i></div>
+                </a>
+
+                <a href="#" class="artigo-linha" data-cat="cultura">
+                    <div class="artigo-linha__num">04</div>
+                    <div class="artigo-linha__img">
+                        <img src="../media/Mbanza Kongo.jpeg" alt="Mbanza Kongo" loading="lazy">
+                    </div>
+                    <div class="artigo-linha__texto">
+                        <div class="artigo-linha__topo">
+                            <span class="tag">Cultura</span>
+                            <span class="artigo-meta"><i class="fa-regular fa-calendar"></i> 20 Mai, 2026 · <i class="fa-regular fa-clock"></i> 9 min</span>
+                        </div>
+                        <h3>Mbanza Kongo: a capital esquecida de um reino que marcou a história de África</h3>
+                        <p>O único Património Mundial da UNESCO em Angola e a história viva de um reino que existia antes de Portugal "descobrir" o Brasil.</p>
+                    </div>
+                    <div class="artigo-linha__seta"><i class="fa-solid fa-arrow-right"></i></div>
+                </a>
+
+                <a href="#" class="artigo-linha" data-cat="guias">
+                    <div class="artigo-linha__num">05</div>
+                    <div class="artigo-linha__img">
+                        <img src="../media/Museu Nacional de Angola.jpeg" alt="Luanda" loading="lazy">
+                    </div>
+                    <div class="artigo-linha__texto">
+                        <div class="artigo-linha__topo">
+                            <span class="tag">Guias Práticos</span>
+                            <span class="artigo-meta"><i class="fa-regular fa-calendar"></i> 02 Mai, 2026 · <i class="fa-regular fa-clock"></i> 12 min</span>
+                        </div>
+                        <h3>Do visto ao primeiro dia em Luanda: o guia de chegada que devia existir</h3>
+                        <p>Documentação, moedas locais, transportes, áreas seguras — os primeiros passos para quem chega pela primeira vez à capital.</p>
+                    </div>
+                    <div class="artigo-linha__seta"><i class="fa-solid fa-arrow-right"></i></div>
+                </a>
+
+                <a href="#" class="artigo-linha" data-cat="fotografia">
+                    <div class="artigo-linha__num">06</div>
+                    <div class="artigo-linha__img">
+                        <img src="../media/Rectangle 22 (1).png" alt="Savana" loading="lazy">
+                    </div>
+                    <div class="artigo-linha__texto">
+                        <div class="artigo-linha__topo">
+                            <span class="tag">Fotografia</span>
+                            <span class="artigo-meta"><i class="fa-regular fa-calendar"></i> 22 Abr, 2026 · <i class="fa-regular fa-clock"></i> 7 min</span>
+                        </div>
+                        <h3>Os melhores ângulos para fotografar a savana angolana ao pôr do sol</h3>
+                        <p>Equipamento recomendado, horários de luz dourada e as localizações secretas que transformam uma foto comum numa imagem de revista.</p>
+                    </div>
+                    <div class="artigo-linha__seta"><i class="fa-solid fa-arrow-right"></i></div>
+                </a>
+
+                <a href="#" class="artigo-linha" data-cat="destinos">
+                    <div class="artigo-linha__num">07</div>
+                    <div class="artigo-linha__img">
+                        <img src="../media/Rectangle 22.png" alt="Namibe" loading="lazy">
+                    </div>
+                    <div class="artigo-linha__texto">
+                        <div class="artigo-linha__topo">
+                            <span class="tag">Destinos</span>
+                            <span class="artigo-meta"><i class="fa-regular fa-calendar"></i> 12 Abr, 2026 · <i class="fa-regular fa-clock"></i> 5 min</span>
+                        </div>
+                        <h3>Namibe: onde o deserto encontra o oceano e o silêncio tem textura</h3>
+                        <p>Uma das paisagens mais únicas do continente africano — e como chegar lá sem depender de pacotes turísticos.</p>
+                    </div>
+                    <div class="artigo-linha__seta"><i class="fa-solid fa-arrow-right"></i></div>
+                </a>
+
+                <a href="#" class="artigo-linha" data-cat="seguranca">
+                    <div class="artigo-linha__num">08</div>
+                    <div class="artigo-linha__img">
+                        <img src="../media/6.jpg" alt="Interior" loading="lazy">
+                    </div>
+                    <div class="artigo-linha__texto">
+                        <div class="artigo-linha__topo">
+                            <span class="tag">Segurança</span>
+                            <span class="artigo-meta"><i class="fa-regular fa-calendar"></i> 01 Abr, 2026 · <i class="fa-regular fa-clock"></i> 8 min</span>
+                        </div>
+                        <h3>Kit de viagem para o interior de Angola: o que levar e o que nunca esquecer</h3>
+                        <p>Da farmácia de bordo ao jerricão extra de combustível — a checklist definitiva para rotas off-road em Angola.</p>
+                    </div>
+                    <div class="artigo-linha__seta"><i class="fa-solid fa-arrow-right"></i></div>
+                </a>
+
+            </div>
+
+            <!-- SIDEBAR -->
+            <aside class="sidebar">
+
+                <!-- FILTRO -->
+                <div class="sidebar-bloco">
+                    <h4 class="sidebar-titulo">Filtrar por tema</h4>
+                    <div class="filtros-sidebar">
+                        <button class="filtro-pill filtro-pill--active" data-cat="todos">Todos</button>
+                        <button class="filtro-pill" data-cat="guias">Guias Práticos</button>
+                        <button class="filtro-pill" data-cat="destinos">Destinos</button>
+                        <button class="filtro-pill" data-cat="fotografia">Fotografia</button>
+                        <button class="filtro-pill" data-cat="cultura">Cultura</button>
+                        <button class="filtro-pill" data-cat="seguranca">Segurança</button>
+                    </div>
+                </div>
+
+                <!-- MAIS LIDOS -->
+                <div class="sidebar-bloco">
+                    <h4 class="sidebar-titulo">Mais lidos</h4>
+                    <div class="mais-lidos">
+                        <a href="#" class="mais-lido-item">
+                            <span class="mais-lido-num">01</span>
+                            <div>
+                                <p>Do visto ao primeiro dia em Luanda: o guia de chegada que devia existir</p>
+                                <span>12 min · Guias Práticos</span>
+                            </div>
+                        </a>
+                        <a href="#" class="mais-lido-item">
+                            <span class="mais-lido-num">02</span>
+                            <div>
+                                <p>Serra da Leba: o guia definitivo</p>
+                                <span>8 min · Destinos</span>
+                            </div>
+                        </a>
+                        <a href="#" class="mais-lido-item">
+                            <span class="mais-lido-num">03</span>
+                            <div>
+                                <p>É seguro viajar pelo interior de Angola?</p>
+                                <span>7 min · Segurança</span>
+                            </div>
+                        </a>
+                        <a href="#" class="mais-lido-item">
+                            <span class="mais-lido-num">04</span>
+                            <div>
+                                <p>Mbanza Kongo: a capital esquecida</p>
+                                <span>9 min · Cultura</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- NEWSLETTER SIDEBAR -->
+                <div class="sidebar-bloco sidebar-newsletter">
+                    <i class="fa-regular fa-envelope sidebar-newsletter__icon"></i>
+                    <h4>Receba os próximos artigos</h4>
+                    <p>Dicas exclusivas e roteiros secretos — directamente no seu email.</p>
+                    <form onsubmit="handleNewsletter(event)">
+                        <input type="email" placeholder="O seu email" required>
+                        <button type="submit">Subscrever</button>
+                    </form>
+                </div>
+
+                <!-- PLANEAR CTA -->
+                <div class="sidebar-bloco sidebar-cta">
+                    <img src="../media/Cabo_Ledo_2.png" alt="Angola" loading="lazy">
+                    <div class="sidebar-cta__body">
+                        <h4>Pronto para ir a Angola?</h4>
+                        <p>Transformamos o que leu em itinerário real.</p>
+                        <a href="planeiaViagem.html" class="btn-sidebar-cta">Planear a minha viagem →</a>
+                    </div>
+                </div>
+
+            </aside>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="rodape">
+        <div class="rodape__marca">
+            <img src="../media/logo 1.png" alt="Tunda Angola" class="rodape__logo">
+            <p class="rodape__tagline">Onde a beleza lhe dá as boas-vindas.</p>
+            <div class="rodape__redes">
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <p class="copyright">© 2026 <span>Eva_Brandao</span>. All Rights Reserved</p>
+        </div>
+        <div class="rodape__col">
+            <h4>Explorar</h4>
+            <ul>
+                <li><a href="home.html">Início</a></li>
+                <li><a href="sobreNos.html">Sobre Nós</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="destinos.html">Destinos</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </div>
+        <div class="rodape__col">
+            <h4>Links Rápidos</h4>
+            <ul>
+                <li><a href="planeiaViagem.html">Planear Viagem</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="politicasPrivacidade.html">Políticas de Privacidade</a></li>
+                <li><a href="termosCondicoes.html">Termos e Condições</a></li>
+            </ul>
+        </div>
+        <div class="rodape__col rodape__contactos">
+            <h4>Contactos</h4>
+            <div class="contacto-item"><i class="fa-solid fa-location-dot"></i><p>Benfica, Luanda, Angola</p></div>
+            <div class="contacto-item"><i class="fa-solid fa-envelope"></i><p>tendapaisagens@gmail.com</p></div>
+            <div class="contacto-item"><i class="fa-brands fa-whatsapp"></i><p>+244 923 555 609</p></div>
+            <a href="https://wa.me/244923555609" class="btn-whatsapp" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> Falar no WhatsApp
+            </a>
+        </div>
+    </footer>
+
+   
+</body>
+</html>

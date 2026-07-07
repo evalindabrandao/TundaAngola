@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planear Viagem — Tunda Angola</title>
+    <link rel="stylesheet" href="../css/planeiaViagem.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="nav" id="nav">
+        <div class="nav__logo"><img src="../media/logo 1.png" alt="Tunda Angola"></div>
+        <ul class="nav__links">
+            <li><a href="home.html" class="nav__link">Início</a></li>
+            <li><a href="sobreNos.html" class="nav__link">Sobre</a></li>
+            <li><a href="servicos.html" class="nav__link">Serviços</a></li>
+            <li><a href="destinos.html" class="nav__link">Destinos</a></li>
+            <li><a href="blog.html" class="nav__link">Blog</a></li>
+            <li><a href="planeiaViagem.html" class="nav__cta nav__cta--active">Planear Viagem</a></li>
+        </ul>
+        <button class="nav__burger" id="burger"><span></span><span></span><span></span></button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="home.html">Início</a></li>
+            <li><a href="sobreNos.html">Sobre</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="destinos.html">Destinos</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="planeiaViagem.html">Planear Viagem</a></li>
+        </ul>
+    </div>
+
+    <!-- HERO -->
+    <section class="page-hero">
+        <div class="page-hero__bg">
+            <img src="../media/1.jpg" alt="Quedas de Kalandula" loading="eager">
+            <div class="page-hero__overlay"></div>
+        </div>
+        <div class="page-hero__content">
+            <span class="page-hero__eyebrow">Consultoria Personalizada</span>
+            <h1 class="page-hero__title">Planeie a sua<br><em>aventura</em> em Angola.</h1>
+            <p class="page-hero__sub">Responda a algumas perguntas e criamos o roteiro ideal para si.</p>
+        </div>
+    </section>
+
+    <!-- FORMULÁRIO PASSO A PASSO -->
+    <section class="planeador">
+        <div class="planeador__inner">
+
+            <!-- PROGRESS BAR -->
+            <div class="progress-bar">
+                <div class="progress-bar__fill" id="progressFill"></div>
+            </div>
+            <div class="progress-steps" id="progressSteps">
+                <div class="p-step p-step--active" data-step="1"><span>1</span> Estilo</div>
+                <div class="p-step" data-step="2"><span>2</span> Destino</div>
+                <div class="p-step" data-step="3"><span>3</span> Datas</div>
+                <div class="p-step" data-step="4"><span>4</span> Grupo</div>
+                <div class="p-step" data-step="5"><span>5</span> Extras</div>
+                <div class="p-step" data-step="6"><span>6</span> Contacto</div>
+            </div>
+
+            <form class="form" id="planForm" novalidate>
+
+                <!-- PASSO 1 — ESTILO DE VIAGEM -->
+                <div class="form-step active" data-step="1">
+                    <div class="step-header">
+                        <span class="step-num">Passo 1 de 6</span>
+                        <h2>Qual é o seu estilo de viagem?</h2>
+                        <p>Escolha o que melhor descreve o que procura. Pode selecionar mais de um.</p>
+                    </div>
+                    <div class="option-grid">
+                        <label class="option-card">
+                            <input type="checkbox" name="estilo" value="aventura">
+                            <div class="option-card__inner">
+                                <i class="fa-solid fa-mountain-sun"></i>
+                                <strong>Aventura</strong>
+                                <span>Picadas, trekking, acampamento e adrenalina</span>
+                            </div>
+                        </label>
+                        <label class="option-card">
+                            <input type="checkbox" name="estilo" value="conforto">
+                            <div class="option-card__inner">
+                                <i class="fa-solid fa-star"></i>
+                                <strong>Conforto Premium</strong>
+                                <span>Lodges, refeições locais sofisticadas e serviço personalizado</span>
+                            </div>
+                        </label>
+                        <label class="option-card">
+                            <input type="checkbox" name="estilo" value="fotografia">
+                            <div class="option-card__inner">
+                                <i class="fa-solid fa-camera"></i>
+                                <strong>Fotografia</strong>
+                                <span>Paisagens, fauna, cultura e luz perfeita para capturar</span>
+                            </div>
+                        </label>
+                        <label class="option-card">
+                            <input type="checkbox" name="estilo" value="cultura">
+                            <div class="option-card__inner">
+                                <i class="fa-solid fa-landmark"></i>
+                                <strong>Cultura & História</strong>
+                                <span>Museus, sítios históricos, comunidades e gastronomia</span>
+                            </div>
+                        </label>
+                        <label class="option-card">
+                            <input type="checkbox" name="estilo" value="natureza">
+                            <div class="option-card__inner">
+                                <i class="fa-solid fa-leaf"></i>
+                                <strong>Natureza & Safari</strong>
+                                <span>Parques, fauna selvagem e paisagens intocadas</span>
+                            </div>
+                        </label>
+                        <label class="option-card">
+                            <input type="checkbox" name="estilo" value="praia">
+                            <div class="option-card__inner">
+                                <i class="fa-solid fa-umbrella-beach"></i>
+                                <strong>Praia & Descanso</strong>
+                                <span>Praias virgens, mar, relaxamento e paisagens costeiras</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- PASSO 2 — DESTINO -->
+                <div class="form-step" data-step="2">
+                    <div class="step-header">
+                        <span class="step-num">Passo 2 de 6</span>
+                        <h2>Tem algum destino em mente?</h2>
+                        <p>Selecione um ou mais destinos que lhe interessam — ou deixe em branco e sugerimos nós.</p>
+                    </div>
+                    <div class="option-grid option-grid--dest">
+                        <label class="option-card option-card--dest">
+                            <input type="checkbox" name="destino" value="kalandula">
+                            <div class="option-card__inner">
+                                <div class="dest-thumb" style="background-image:url('../media/1.jpg')"></div>
+                                <div class="dest-info">
+                                    <strong>Quedas de Kalandula</strong>
+                                    <span>Malanje · Natureza</span>
+                                </div>
+                            </div>
+                        </label>
+                        <label class="option-card option-card--dest">
+                            <input type="checkbox" name="destino" value="leba">
+                            <div class="option-card__inner">
+                                <div class="dest-thumb" style="background-image:url('../media/Serra da Leba.jpg')"></div>
+                                <div class="dest-info">
+                                    <strong>Serra da Leba</strong>
+                                    <span>Huíla · Aventura</span>
+                                </div>
+                            </div>
+                        </label>
+                        <label class="option-card option-card--dest">
+                            <input type="checkbox" name="destino" value="tundavala">
+                            <div class="option-card__inner">
+                                <div class="dest-thumb" style="background-image:url('../media/fenda da tundavala.jpg')"></div>
+                                <div class="dest-info">
+                                    <strong>Fenda da Tundavala</strong>
+                                    <span>Huíla · Aventura</span>
+                                </div>
+                            </div>
+                        </label>
+                        <label class="option-card option-card--dest">
+                            <input type="checkbox" name="destino" value="namibe">
+                            <div class="option-card__inner">
+                                <div class="dest-thumb" style="background-image:url('../media/Rectangle 22 (1).png')"></div>
+                                <div class="dest-info">
+                                    <strong>Deserto do Namibe</strong>
+                                    <span>Namibe · Natureza</span>
+                                </div>
+                            </div>
+                        </label>
+                        <label class="option-card option-card--dest">
+                            <input type="checkbox" name="destino" value="cabLedo">
+                            <div class="option-card__inner">
+                                <div class="dest-thumb" style="background-image:url('../media/Cabo_Ledo_2.png')"></div>
+                                <div class="dest-info">
+                                    <strong>Cabo Ledo</strong>
+                                    <span>Luanda · Praia</span>
+                                </div>
+                            </div>
+                        </label>
+                        <label class="option-card option-card--dest">
+                            <input type="checkbox" name="destino" value="mbanza">
+                            <div class="option-card__inner">
+                                <div class="dest-thumb" style="background-image:url('../media/Mbanza Kongo.jpeg')"></div>
+                                <div class="dest-info">
+                                    <strong>Mbanza Kongo</strong>
+                                    <span>Zaire · Cultura</span>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <label class="surprise-check">
+                        <input type="checkbox" name="destino" value="surpresa">
+                        <span><i class="fa-solid fa-wand-magic-sparkles"></i> Surpreenda-me — escolham vocês o melhor destino para o meu perfil</span>
+                    </label>
+                </div>
+
+                <!-- PASSO 3 — DATAS -->
+                <div class="form-step" data-step="3">
+                    <div class="step-header">
+                        <span class="step-num">Passo 3 de 6</span>
+                        <h2>Quando pensa viajar?</h2>
+                        <p>Indique as datas previstas ou o período do ano que prefere.</p>
+                    </div>
+                    <div class="dates-grid">
+                        <div class="field-group">
+                            <label>Data de partida</label>
+                            <input type="date" name="partida" class="field-input">
+                        </div>
+                        <div class="field-group">
+                            <label>Data de regresso</label>
+                            <input type="date" name="regresso" class="field-input">
+                        </div>
+                    </div>
+                    <p class="dates-or">Ou indique o período preferido:</p>
+                    <div class="option-grid option-grid--sm">
+                        <label class="option-card">
+                            <input type="radio" name="periodo" value="cacimbo">
+                            <div class="option-card__inner">
+                                <i class="fa-solid fa-sun"></i>
+                                <strong>Cacimbo</strong>
+                                <span>Maio — Setembro (época seca, ideal)</span>
+                            </div>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="periodo" value="chuvas">
+                            <div class="option-card__inner">
+                                <i class="fa-solid fa-cloud-rain"></i>
+                                <strong>Época das Chuvas</strong>
+                                <span>Outubro — Abril (paisagens exuberantes)</span>
+                            </div>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="periodo" value="flexivel">
+                            <div class="option-card__inner">
+                                <i class="fa-regular fa-calendar"></i>
+                                <strong>Flexível</strong>
+                                <span>Qualquer época — orientem-me vós</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- PASSO 4 — GRUPO -->
+                <div class="form-step" data-step="4">
+                    <div class="step-header">
+                        <span class="step-num">Passo 4 de 6</span>
+                        <h2>Quem viaja consigo?</h2>
+                        <p>Selecione o perfil do seu grupo de viagem.</p>
+                    </div>
+                    <div class="option-grid option-grid--sm">
+                        <label class="option-card">
+                            <input type="radio" name="grupo" value="solo">
+                            <div class="option-card__inner">
+                                <i class="fa-solid fa-user"></i>
+                                <strong>Viajo sozinho(a)</strong>
+                                <span>Experiência individual e imersiva</span>
+                            </div>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="grupo" value="casal">
+                            <div class="option-card__inner">
+                                <i class="fa-solid fa-heart"></i>
+                                <strong>Casal</strong>
+                                <span>Dois viajantes, experiência romântica ou de aventura</span>
+                            </div>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="grupo" value="familia">
+                            <div class="option-card__inner">
+                                <i class="fa-solid fa-people-roof"></i>
+                                <strong>Família</strong>
+                                <span>Com crianças, foco em segurança e conforto</span>
+                            </div>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="grupo" value="amigos">
+                            <div class="option-card__inner">
+                                <i class="fa-solid fa-user-group"></i>
+                                <strong>Grupo de Amigos</strong>
+                                <span>3 a 10 pessoas, espírito de descoberta</span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="field-group" style="margin-top:32px; max-width:320px">
+                        <label>Número total de pessoas</label>
+                        <div class="counter">
+                            <button type="button" class="counter__btn" id="btnMenos">−</button>
+                            <span class="counter__val" id="contadorVal">2</span>
+                            <button type="button" class="counter__btn" id="btnMais">+</button>
+                            <input type="hidden" name="numPessoas" id="numPessoas" value="2">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PASSO 5 — EXTRAS -->
+                <div class="form-step" data-step="5">
+                    <div class="step-header">
+                        <span class="step-num">Passo 5 de 6</span>
+                        <h2>O que pretende incluir na viagem?</h2>
+                        <p>Selecione os serviços adicionais que lhe interessam.</p>
+                    </div>
+                    <div class="option-grid">
+                        <label class="option-card">
+                            <input type="checkbox" name="extras" value="guia">
+                            <div class="option-card__inner">
+                                <i class="fa-solid fa-person-hiking"></i>
+                                <strong>Guia Local</strong>
+                                <span>Guia certificado com conhecimento do terreno e da cultura</span>
+                            </div>
+                        </label>
+                        <label class="option-card">
+                            <input type="checkbox" name="extras" value="4x4">
+                            <div class="option-card__inner">
+                                <i class="fa-solid fa-truck-monster"></i>
+                                <strong>Viatura 4×4</strong>
+                                <span>Para destinos de picada e terrenos difíceis</span>
+                            </div>
+                        </label>
+                        <label class="option-card">
+                            <input type="checkbox" name="extras" value="alojamento">
+                            <div class="option-card__inner">
+                                <i class="fa-solid fa-bed"></i>
+                                <strong>Sugestões de Alojamento</strong>
+                                <span>Seleção de lodges, pousadas e campismo verificados</span>
+                            </div>
+                        </label>
+                        <label class="option-card">
+                            <input type="checkbox" name="extras" value="visto">
+                            <div class="option-card__inner">
+                                <i class="fa-solid fa-passport"></i>
+                                <strong>Apoio com Documentação</strong>
+                                <span>Orientação sobre visto, seguro e requisitos de entrada</span>
+                            </div>
+                        </label>
+                        <label class="option-card">
+                            <input type="checkbox" name="extras" value="fotografia">
+                            <div class="option-card__inner">
+                                <i class="fa-solid fa-camera-retro"></i>
+                                <strong>Guia de Fotografia</strong>
+                                <span>Melhores ângulos, horas de luz e spots exclusivos</span>
+                            </div>
+                        </label>
+                        <label class="option-card">
+                            <input type="checkbox" name="extras" value="gastronomia">
+                            <div class="option-card__inner">
+                                <i class="fa-solid fa-utensils"></i>
+                                <strong>Experiências Gastronómicas</strong>
+                                <span>Restaurantes locais autênticos e mercados típicos</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- PASSO 6 — CONTACTO -->
+                <div class="form-step" data-step="6">
+                    <div class="step-header">
+                        <span class="step-num">Passo 6 de 6</span>
+                        <h2>Como podemos contactá-lo(a)?</h2>
+                        <p>Deixe os seus dados e respondemos em menos de 48 horas com uma proposta personalizada.</p>
+                    </div>
+                    <div class="contact-grid">
+                        <div class="field-group">
+                            <label>Nome completo <span class="req">*</span></label>
+                            <input type="text" name="nome" class="field-input" placeholder="O seu nome" required>
+                        </div>
+                        <div class="field-group">
+                            <label>E-mail <span class="req">*</span></label>
+                            <input type="email" name="email" class="field-input" placeholder="email@exemplo.com" required>
+                        </div>
+                        <div class="field-group">
+                            <label>Telefone / WhatsApp</label>
+                            <input type="tel" name="telefone" class="field-input" placeholder="+244 9XX XXX XXX">
+                        </div>
+                        <div class="field-group">
+                            <label>País de origem</label>
+                            <input type="text" name="pais" class="field-input" placeholder="Ex: Portugal, Brasil, Angola...">
+                        </div>
+                        <div class="field-group field-group--full">
+                            <label>Notas adicionais</label>
+                            <textarea name="notas" class="field-input field-textarea" placeholder="Algo que devemos saber? Restrições alimentares, mobilidade reduzida, aniversários especiais..."></textarea>
+                        </div>
+                        <div class="field-group field-group--full">
+                            <label class="check-label">
+                                <input type="checkbox" name="consentimento" required>
+                                <span>Aceito que os meus dados sejam usados para responder ao meu pedido de consultoria, de acordo com a <a href="politicasPrivacidade.html">Política de Privacidade</a>.</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NAVEGAÇÃO -->
+                <div class="form-nav">
+                    <button type="button" class="btn-prev" id="btnPrev">
+                        <i class="fa-solid fa-arrow-left"></i> Anterior
+                    </button>
+                    <button type="button" class="btn-next" id="btnNext">
+                        Seguinte <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                    <button type="submit" class="btn-submit" id="btnSubmit" style="display:none">
+                        <i class="fa-solid fa-paper-plane"></i> Enviar pedido
+                    </button>
+                </div>
+
+            </form>
+
+            <!-- SUCESSO -->
+            <div class="form-success" id="formSuccess" style="display:none">
+                <div class="success-icon"><i class="fa-solid fa-check"></i></div>
+                <h2>Pedido enviado com sucesso!</h2>
+                <p>Recebemos a sua solicitação e entraremos em contacto em menos de 48 horas com uma proposta personalizada para a sua aventura em Angola.</p>
+                <a href="home.html" class="btn-primary">Voltar ao início</a>
+            </div>
+
+        </div>
+
+        <!-- SIDEBAR INFO -->
+        <aside class="planeador__aside">
+            <div class="aside-card">
+                <i class="fa-regular fa-clock"></i>
+                <div>
+                    <strong>Resposta em 48h</strong>
+                    <span>Recebe uma proposta detalhada no prazo de dois dias úteis</span>
+                </div>
+            </div>
+            <div class="aside-card">
+                <i class="fa-solid fa-shield-halved"></i>
+                <div>
+                    <strong>Sem compromisso</strong>
+                    <span>A consulta inicial é gratuita e não implica qualquer obrigação</span>
+                </div>
+            </div>
+            <div class="aside-card">
+                <i class="fa-solid fa-sliders"></i>
+                <div>
+                    <strong>100% personalizado</strong>
+                    <span>Nenhum roteiro é igual. Tudo é criado à medida do seu perfil</span>
+                </div>
+            </div>
+            <div class="aside-card">
+                <i class="fa-brands fa-whatsapp"></i>
+                <div>
+                    <strong>Prefere falar directamente?</strong>
+                    <a href="https://wa.me/244923555609" target="_blank" class="whatsapp-link">Iniciar conversa no WhatsApp →</a>
+                </div>
+            </div>
+            <div class="aside-quote">
+                <p>"Angola tem paisagens que mudam pessoas. O nosso trabalho é garantir que as vive em segurança e plenitude."</p>
+                <span>— Equipa Tunda Angola</span>
+            </div>
+        </aside>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="rodape">
+        <div class="rodape__marca">
+            <img src="../media/logo 1.png" alt="Tunda Angola" class="rodape__logo">
+            <p class="rodape__tagline">Onde a beleza lhe dá as boas-vindas.</p>
+            <div class="rodape__redes">
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <p class="copyright">© 2026 <span>Eva_Brandao</span>. All Rights Reserved</p>
+        </div>
+        <div class="rodape__col">
+            <h4>Explorar</h4>
+            <ul>
+                <li><a href="home.html">Início</a></li>
+                <li><a href="sobreNos.html">Sobre Nós</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="destinos.html">Destinos</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </div>
+        <div class="rodape__col">
+            <h4>Links Rápidos</h4>
+            <ul>
+                <li><a href="planeiaViagem.html">Planear Viagem</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="politicasPrivacidade.html">Políticas de Privacidade</a></li>
+                <li><a href="termosCondicoes.html">Termos e Condições</a></li>
+            </ul>
+        </div>
+        <div class="rodape__col rodape__contactos">
+            <h4>Contactos</h4>
+            <div class="contacto-item"><i class="fa-solid fa-location-dot"></i><p>Benfica, Luanda, Angola</p></div>
+            <div class="contacto-item"><i class="fa-solid fa-envelope"></i><p>tendapaisagens@gmail.com</p></div>
+            <div class="contacto-item"><i class="fa-brands fa-whatsapp"></i><p>+244 923 555 609</p></div>
+            <a href="contactos.html" class="btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> Falar no WhatsApp</a>
+        </div>
+    </footer>
+
+    <script>
+        // Nav scroll
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => nav.classList.toggle('nav--scrolled', window.scrollY > 60));
+        const burger = document.getElementById('burger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        burger.addEventListener('click', () => { burger.classList.toggle('open'); mobileMenu.classList.toggle('open'); });
+
+        // Multi-step form
+        let currentStep = 1;
+        const totalSteps = 6;
+        const steps = document.querySelectorAll('.form-step');
+        const pSteps = document.querySelectorAll('.p-step');
+        const btnPrev = document.getElementById('btnPrev');
+        const btnNext = document.getElementById('btnNext');
+        const btnSubmit = document.getElementById('btnSubmit');
+        const progressFill = document.getElementById('progressFill');
+
+        function updateUI() {
+            steps.forEach(s => s.classList.remove('active'));
+            document.querySelector(`.form-step[data-step="${currentStep}"]`).classList.add('active');
+            pSteps.forEach(s => {
+                s.classList.remove('p-step--active','p-step--done');
+                const n = parseInt(s.dataset.step);
+                if (n === currentStep) s.classList.add('p-step--active');
+                if (n < currentStep)  s.classList.add('p-step--done');
+            });
+            progressFill.style.width = `${((currentStep - 1) / (totalSteps - 1)) * 100}%`;
+            btnPrev.style.display  = currentStep === 1 ? 'none' : '';
+            btnNext.style.display  = currentStep === totalSteps ? 'none' : '';
+            btnSubmit.style.display = currentStep === totalSteps ? '' : 'none';
+        }
+
+        btnNext.addEventListener('click', () => { if (currentStep < totalSteps) { currentStep++; updateUI(); window.scrollTo({top:0,behavior:'smooth'}); } });
+        btnPrev.addEventListener('click', () => { if (currentStep > 1) { currentStep--; updateUI(); window.scrollTo({top:0,behavior:'smooth'}); } });
+
+        document.getElementById('planForm').addEventListener('submit', e => {
+            e.preventDefault();
+            document.getElementById('planForm').style.display = 'none';
+            document.querySelector('.progress-bar').style.display = 'none';
+            document.querySelector('.progress-steps').style.display = 'none';
+            document.getElementById('formSuccess').style.display = 'flex';
+        });
+
+        // Counter
+        const contadorVal = document.getElementById('contadorVal');
+        const numPessoas  = document.getElementById('numPessoas');
+        document.getElementById('btnMais').addEventListener('click', () => {
+            let v = parseInt(contadorVal.textContent);
+            if (v < 30) { v++; contadorVal.textContent = v; numPessoas.value = v; }
+        });
+        document.getElementById('btnMenos').addEventListener('click', () => {
+            let v = parseInt(contadorVal.textContent);
+            if (v > 1) { v--; contadorVal.textContent = v; numPessoas.value = v; }
+        });
+
+        updateUI();
+    </script>
+</body>
+</html>

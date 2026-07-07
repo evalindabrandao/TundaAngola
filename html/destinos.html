@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinos — Tunda Angola</title>
+    <meta name="description" content="Explore os destinos mais impressionantes de Angola. Quedas de Kalandula, Serra da Leba, Fenda da Tundavala, Cabo Ledo e muito mais.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/destinos.css">
+</head>
+<body>
+
+    <!-- ═══ NAVBAR ═══ -->
+    <nav class="nav" id="nav">
+        <a href="home.html" class="nav__logo">
+            <img src="../media/logo 1.png" alt="Tunda Angola">
+        </a>
+        <ul class="nav__links">
+            <li><a href="home.html" class="nav__link">Início</a></li>
+            <li><a href="sobreNos.html" class="nav__link">Sobre</a></li>
+            <li><a href="destinos.html" class="nav__link nav__link--active">Destinos</a></li>
+            <li><a href="servicos.html" class="nav__link">Serviços</a></li>
+            <li><a href="blog.html" class="nav__link">Blog</a></li>
+            <li><a href="contactos.html" class="nav__link">Contactos</a></li>
+        </ul>
+        <a href="planeiaViagem.html" class="nav__cta">Planear Viagem</a>
+        <button class="nav__burger" id="burger" aria-label="Abrir menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- ═══ MENU MOBILE ═══ -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="home.html">Início</a>
+        <a href="sobreNos.html">Sobre</a>
+        <a href="destinos.html">Destinos</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="blog.html">Blog</a>
+        <a href="contactos.html">Contactos</a>
+        <a href="planeiaViagem.html" class="mobile-cta">Planear Viagem</a>
+    </div>
+
+    <!-- ═══ HERO ═══ -->
+    <header class="hero">
+        <div class="hero__bg">
+            <img src="../media/all tours.png " alt="Angola" loading="eager">
+            <div class="hero__overlay"></div>
+        </div>
+        <div class="hero__inner">
+            <span class="hero__eyebrow"><i class="fa-solid fa-location-dot"></i> 18 Províncias · Angola</span>
+            <h1 class="hero__title">Cada destino,<br><em>uma história.</em></h1>
+            <p class="hero__sub">Do Namibe ao Maiombe, Angola guarda paisagens que surpreendem até os viajantes mais experientes.</p>
+            <div class="hero__stats">
+                <div class="hero__stat">
+                    <strong>+100</strong>
+                    <span>Destinos</span>
+                </div>
+                <div class="hero__stat-divider"></div>
+                <div class="hero__stat">
+                    <strong>18</strong>
+                    <span>Províncias</span>
+                </div>
+                <div class="hero__stat-divider"></div>
+                <div class="hero__stat">
+                    <strong>+1000</strong>
+                    <span>Viajantes</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ═══ FILTROS ═══ -->
+    <div class="filtros" id="filtros">
+        <div class="filtros__inner">
+            <div class="filtros__busca">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="buscaInput" placeholder="Pesquisar destino…" autocomplete="off">
+            </div>
+            <div class="filtros__categorias">
+                <button class="filtro-btn filtro-btn--active" data-filter="all">
+                    <i class="fa-solid fa-globe"></i> Todos
+                </button>
+                <button class="filtro-btn" data-filter="natureza">
+                    <i class="fa-solid fa-mountain-sun"></i> Natureza
+                </button>
+                <button class="filtro-btn" data-filter="praia">
+                    <i class="fa-solid fa-umbrella-beach"></i> Praias
+                </button>
+                <button class="filtro-btn" data-filter="aventura">
+                    <i class="fa-solid fa-person-hiking"></i> Aventura
+                </button>
+                <button class="filtro-btn" data-filter="historia">
+                    <i class="fa-solid fa-landmark"></i> História
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══ CONTAGEM DE RESULTADOS ═══ -->
+    <div class="resultados-bar" id="resultadosBar">
+        <div class="resultados-bar__inner">
+            <span id="resultadosCount">10 destinos encontrados</span>
+        </div>
+    </div>
+
+    <!-- ═══ GRID EDITORIAL ═══ -->
+    <main class="destinos-wrapper" id="destinosWrapper">
+
+        <!-- LINHA 1: card grande esquerda + dois pequenos direita -->
+        <div class="linha linha--a">
+
+            <article class="card card--tall" data-categoria="natureza aventura" data-nome="Quedas de Kalandula">
+                <div class="card__img-wrap">
+                    <img src="../media/1.jpg" alt="Quedas de Kalandula" loading="lazy">
+                </div>
+                <div class="card__badges">
+                    <span class="badge badge--prov"><i class="fa-solid fa-location-dot"></i> Malanje</span>
+                    <span class="badge badge--cat">Natureza</span>
+                </div>
+                <div class="card__body">
+                    <h2 class="card__titulo">Quedas de Kalandula</h2>
+                    <p class="card__desc">As segundas maiores quedas de África, com 105m de altura e um arco-íris permanente na névoa.</p>
+                    <div class="card__meta">
+                        <span><i class="fa-solid fa-car-side"></i> 4×4 recomendado</span>
+                        <span><i class="fa-solid fa-sun"></i> Maio – Set</span>
+                    </div>
+                    <a href="planeiaViagem.html" class="card__cta">
+                        Planear rota <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <div class="coluna-dupla">
+
+                <article class="card card--mid" data-categoria="natureza aventura" data-nome="Serra da Leba">
+                    <div class="card__img-wrap">
+                        <img src="../media/Serra da Leba.jpg" alt="Serra da Leba" loading="lazy">
+                    </div>
+                    <div class="card__badges">
+                        <span class="badge badge--prov"><i class="fa-solid fa-location-dot"></i> Huíla</span>
+                        <span class="badge badge--cat">Aventura</span>
+                    </div>
+                    <div class="card__body">
+                        <h3 class="card__titulo">Serra da Leba</h3>
+                        <p class="card__desc">Uma das estradas mais fotogénicas do mundo — curvas que desafiam a imaginação.</p>
+                        <a href="planeiaViagem.html" class="card__cta">
+                            Planear rota <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="card card--mid" data-categoria="natureza aventura" data-nome="Fenda da Tundavala">
+                    <div class="card__img-wrap">
+                        <img src="../media/fenda da tundavala.jpg" alt="Fenda da Tundavala" loading="lazy">
+                    </div>
+                    <div class="card__badges">
+                        <span class="badge badge--prov"><i class="fa-solid fa-location-dot"></i> Huíla</span>
+                        <span class="badge badge--cat">Aventura</span>
+                    </div>
+                    <div class="card__body">
+                        <h3 class="card__titulo">Fenda da Tundavala</h3>
+                        <p class="card__desc">Uma fissura de 1000m de profundidade que divide o planalto e revela o infinito.</p>
+                        <a href="planeiaViagem.html" class="card__cta">
+                            Planear rota <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+
+        <!-- LINHA 2: dois pequenos esquerda + card grande direita -->
+        <div class="linha linha--b">
+
+            <div class="coluna-dupla">
+
+                <article class="card card--mid" data-categoria="praia" data-nome="Cabo Ledo">
+                    <div class="card__img-wrap">
+                        <img src="../media/Cabo_Ledo_2.png" alt="Cabo Ledo" loading="lazy">
+                    </div>
+                    <div class="card__badges">
+                        <span class="badge badge--prov"><i class="fa-solid fa-location-dot"></i> Luanda</span>
+                        <span class="badge badge--cat badge--praia">Praia</span>
+                    </div>
+                    <div class="card__body">
+                        <h3 class="card__titulo">Cabo Ledo</h3>
+                        <p class="card__desc">Paraíso secreto a sul de Luanda — praias virgens e ondas que atraem surfistas do mundo.</p>
+                        <a href="planeiaViagem.html" class="card__cta">
+                            Planear rota <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="card card--mid" data-categoria="praia" data-nome="Baía Azul Benguela">
+                    <div class="card__img-wrap">
+                        <img src="../media/Benguela, Angola.jpg" alt="Benguela" loading="lazy">
+                    </div>
+                    <div class="card__badges">
+                        <span class="badge badge--prov"><i class="fa-solid fa-location-dot"></i> Benguela</span>
+                        <span class="badge badge--cat badge--praia">Praia</span>
+                    </div>
+                    <div class="card__body">
+                        <h3 class="card__titulo">Praia Morena</h3>
+                        <p class="card__desc">Areias douradas e águas calmas — a costa mais tranquila de Angola.</p>
+                        <a href="planeiaViagem.html" class="card__cta">
+                            Planear rota <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+            <article class="card card--tall" data-categoria="natureza" data-nome="Deserto do Namibe">
+                <div class="card__img-wrap">
+                    <img src="../media/Rectangle 22 (1).png" alt="Deserto do Namibe" loading="lazy">
+                </div>
+                <div class="card__badges">
+                    <span class="badge badge--prov"><i class="fa-solid fa-location-dot"></i> Namibe</span>
+                    <span class="badge badge--cat">Natureza</span>
+                </div>
+                <div class="card__body">
+                    <h2 class="card__titulo">Deserto do Namibe</h2>
+                    <p class="card__desc">Um dos desertos mais antigos do planeta, onde a areia vermelha encontra o Atlântico em silêncio absoluto.</p>
+                    <div class="card__meta">
+                        <span><i class="fa-solid fa-car-side"></i> 4×4 obrigatório</span>
+                        <span><i class="fa-solid fa-sun"></i> Todo o ano</span>
+                    </div>
+                    <a href="planeiaViagem.html" class="card__cta">
+                        Planear rota <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- LINHA 3: três cards iguais -->
+        <div class="linha linha--c">
+
+            <article class="card card--flat" data-categoria="historia" data-nome="Mbanza Kongo">
+                <div class="card__img-wrap">
+                    <img src="../media/Mbanza Kongo.jpeg" alt="Mbanza Kongo" loading="lazy">
+                </div>
+                <div class="card__badges">
+                    <span class="badge badge--prov"><i class="fa-solid fa-location-dot"></i> Zaire</span>
+                    <span class="badge badge--cat badge--historia">História</span>
+                </div>
+                <div class="card__body">
+                    <h3 class="card__titulo">Mbanza Kongo</h3>
+                    <p class="card__desc">Antiga capital do Reino do Kongo — Património Mundial da UNESCO.</p>
+                    <a href="planeiaViagem.html" class="card__cta">
+                        Planear rota <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <article class="card card--flat" data-categoria="natureza aventura" data-nome="Parque do Luengué Safari">
+                <div class="card__img-wrap">
+                    <img src="../media/How-to-do-a-Safari-in-Angola.jpg" alt="Safari Angola" loading="lazy">
+                </div>
+                <div class="card__badges">
+                    <span class="badge badge--prov"><i class="fa-solid fa-location-dot"></i> Cuando Cubango</span>
+                    <span class="badge badge--cat">Aventura</span>
+                </div>
+                <div class="card__body">
+                    <h3 class="card__titulo">Parque do Luengué</h3>
+                    <p class="card__desc">Elefantes, leões e búfalos num dos parques mais intactos de África.</p>
+                    <a href="planeiaViagem.html" class="card__cta">
+                        Planear rota <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <article class="card card--flat" data-categoria="historia" data-nome="Museu Nacional de Angola">
+                <div class="card__img-wrap">
+                    <img src="../media/Museu Nacional de Angola.jpeg" alt="Museu Nacional" loading="lazy">
+                </div>
+                <div class="card__badges">
+                    <span class="badge badge--prov"><i class="fa-solid fa-location-dot"></i> Luanda</span>
+                    <span class="badge badge--cat badge--historia">História</span>
+                </div>
+                <div class="card__body">
+                    <h3 class="card__titulo">Museu Nacional</h3>
+                    <p class="card__desc">Palácio colonial cor-de-rosa no coração de Luanda, guardião da memória angolana.</p>
+                    <a href="planeiaViagem.html" class="card__cta">
+                        Planear rota <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- Estado vazio (sem resultados) -->
+        <div class="sem-resultados" id="semResultados" style="display:none;">
+            <i class="fa-solid fa-compass"></i>
+            <h3>Nenhum destino encontrado</h3>
+            <p>Tente outro filtro ou pesquisa diferente.</p>
+            <button class="filtro-btn filtro-btn--active" id="resetBtn">
+                Ver todos os destinos
+            </button>
+        </div>
+
+    </main>
+
+    <!-- ═══ CTA BANNER ═══ -->
+    <section class="cta-banner">
+        <div class="cta-banner__inner">
+            <div class="cta-banner__texto">
+                <span class="cta-banner__eyebrow">Pronto para partir?</span>
+                <h2>Criamos o roteiro <em>perfeito</em> para si</h2>
+                <p>Diga-nos o destino, o tempo disponível e o seu estilo de viagem — tratamos do resto.</p>
+            </div>
+            <a href="planeiaViagem.html" class="btn-cta">
+                <i class="fa-solid fa-paper-plane"></i>
+                Iniciar o meu planeamento
+            </a>
+        </div>
+    </section>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="rodape">
+        <div class="rodape__marca">
+            <img src="../media/logo 1.png" alt="Tunda Angola" class="rodape__logo" loading="lazy">
+            <p class="rodape__tagline">Onde a beleza lhe dá as boas-vindas.</p>
+            <div class="rodape__redes">
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <p class="copyright">© 2026 <span>Eva_Brandao</span>. All Rights Reserved</p>
+        </div>
+        <div class="rodape__col">
+            <h4>Explorar</h4>
+            <ul>
+                <li><a href="home.html">Início</a></li>
+                <li><a href="sobreNos.html">Sobre Nós</a></li>
+                <li><a href="destinos.html">Destinos</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </div>
+        <div class="rodape__col">
+            <h4>Links Rápidos</h4>
+            <ul>
+                <li><a href="planeiaViagem.html">Planear Viagem</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="politicasPrivacidade.html">Privacidade</a></li>
+                <li><a href="termosCondicoes.html">Termos</a></li>
+            </ul>
+        </div>
+        <div class="rodape__col">
+            <h4>Contactos</h4>
+            <div class="contacto-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>Benfica, Luanda, Angola</p>
+            </div>
+            <div class="contacto-item">
+                <i class="fa-solid fa-envelope"></i>
+                <p>tendapaisagens@gmail.com</p>
+            </div>
+            <div class="contacto-item">
+                <i class="fa-brands fa-whatsapp"></i>
+                <p>+244 923 555 609</p>
+            </div>
+            <a href="https://wa.me/244923555609" class="btn-whatsapp" target="_blank" rel="noopener">
+                <i class="fa-brands fa-whatsapp"></i> Falar no WhatsApp
+            </a>
+        </div>
+    </footer>
+
+    <script>
+    (() => {
+        // ── Navbar scroll ──
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('nav--scrolled', window.scrollY > 50);
+        }, { passive: true });
+
+        // ── Menu mobile ──
+        const burger = document.getElementById('burger');
+        const menu   = document.getElementById('mobileMenu');
+        const overlay= document.getElementById('mobileOverlay');
+
+        function fecharMenu() {
+            burger.classList.remove('open');
+            menu.classList.remove('open');
+            overlay.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        burger.addEventListener('click', () => {
+            const aberto = menu.classList.contains('open');
+            if (aberto) { fecharMenu(); }
+            else {
+                burger.classList.add('open');
+                menu.classList.add('open');
+                overlay.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+        overlay.addEventListener('click', fecharMenu);
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') fecharMenu(); });
+
+        // ── Filtros + pesquisa ──
+        const cards       = document.querySelectorAll('.card[data-categoria]');
+        const filtros     = document.querySelectorAll('.filtro-btn[data-filter]');
+        const buscaInput  = document.getElementById('buscaInput');
+        const countEl     = document.getElementById('resultadosCount');
+        const semRes      = document.getElementById('semResultados');
+        const linhas      = document.querySelectorAll('.linha');
+        const resetBtn    = document.getElementById('resetBtn');
+
+        let filtroAtivo = 'all';
+        let termoBusca  = '';
+
+        function aplicarFiltros() {
+            let visiveis = 0;
+
+            cards.forEach(card => {
+                const cats  = card.dataset.categoria || '';
+                const nome  = (card.dataset.nome || '').toLowerCase();
+                const titulo = card.querySelector('.card__titulo')?.textContent.toLowerCase() || '';
+
+                const passaCategoria = filtroAtivo === 'all' || cats.includes(filtroAtivo);
+                const passaBusca     = !termoBusca || nome.includes(termoBusca) || titulo.includes(termoBusca);
+
+                if (passaCategoria && passaBusca) {
+                    card.classList.remove('card--oculto');
+                    visiveis++;
+                } else {
+                    card.classList.add('card--oculto');
+                }
+            });
+
+            // Ocultar linhas completamente vazias
+            linhas.forEach(linha => {
+                const temVisivel = [...linha.querySelectorAll('.card')].some(c => !c.classList.contains('card--oculto'));
+                linha.style.display = temVisivel ? '' : 'none';
+            });
+
+            countEl.textContent = visiveis === 1 ? '1 destino encontrado' : `${visiveis} destinos encontrados`;
+            semRes.style.display = visiveis === 0 ? 'flex' : 'none';
+        }
+
+        filtros.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filtros.forEach(b => b.classList.remove('filtro-btn--active'));
+                btn.classList.add('filtro-btn--active');
+                filtroAtivo = btn.dataset.filter;
+                aplicarFiltros();
+            });
+        });
+
+        buscaInput.addEventListener('input', () => {
+            termoBusca = buscaInput.value.toLowerCase().trim();
+            aplicarFiltros();
+        });
+
+        resetBtn?.addEventListener('click', () => {
+            filtroAtivo = 'all';
+            termoBusca  = '';
+            buscaInput.value = '';
+            filtros.forEach(b => b.classList.remove('filtro-btn--active'));
+            document.querySelector('[data-filter="all"]').classList.add('filtro-btn--active');
+            aplicarFiltros();
+        });
+
+    })();
+    </script>
+</body>
+</html>

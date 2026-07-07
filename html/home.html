@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tunda Angola — Onde a Beleza Lhe Dá as Boas-Vindas</title>
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="../javascript/home.js" defer></script>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav class="nav" id="nav">
+        <div class="nav__logo">
+            <img src="../media/logo 1.png" alt="Tunda Angola">
+        </div>
+        <ul class="nav__links">
+            <li><a href="home.html" class="nav__link nav__link--active">Início</a></li>
+            <li><a href="sobreNos.html" class="nav__link">Sobre</a></li>
+            <li><a href="servicos.html" class="nav__link">Serviços</a></li>
+            <li><a href="destinos.html" class="nav__link">Destinos</a></li>
+            <li><a href="blog.html" class="nav__link">Blog</a></li>
+            <li><a href="planeiaViagem.html" class="nav__cta">Planear Viagem</a></li>
+        </ul>
+        <button class="nav__burger" id="burger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="home.html">Início</a></li>
+            <li><a href="sobreNos.html">Sobre</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="destinos.html">Destinos</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="planeiaViagem.html">Planear Viagem</a></li>
+        </ul>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero__bg">
+            <img src="../media/fenda da tundavala.jpg" alt="Fenda da Tundavala, Angola" loading="eager">
+            <div class="hero__overlay"></div>
+        </div>
+
+        <div class="hero__content">
+            <p class="hero__eyebrow">Bem-vindo a Angola</p>
+            <h1 class="hero__title">TUNDA<br><em>ANGOLA</em></h1>
+            <p class="hero__subtitle">Onde a beleza lhe dá as boas-vindas.</p>
+        </div>
+
+        <!-- Search Bar Flutuante -->
+        <div class="hero__search">
+            <div class="search__field">
+                <label><i class="fa-solid fa-location-dot"></i> Destino</label>
+                <select>
+                    <option value="">Escolha um destino</option>
+                    <option>Kalandula, Malanje</option>
+                    <option>Serra da Leba, Huíla</option>
+                    <option>Namibe, Namibe</option>
+                    <option>Cabo Ledo, Luanda</option>
+                    <option>Mbanza Kongo, Zaire</option>
+                    <option>Fenda da Tundavala, Huíla</option>
+                </select>
+            </div>
+            <div class="search__divider"></div>
+            <div class="search__field">
+                <label><i class="fa-solid fa-compass"></i> Tipo de Viagem</label>
+                <select>
+                    <option value="">Selecione o estilo</option>
+                    <option>Aventura e Natureza</option>
+                    <option>Cultura e História</option>
+                    <option>Fotografia</option>
+                    <option>Conforto Premium</option>
+                </select>
+            </div>
+            <div class="search__divider"></div>
+            <div class="search__field">
+                <label><i class="fa-solid fa-users"></i> Viajantes</label>
+                <select>
+                    <option>1 pessoa</option>
+                    <option>2 pessoas</option>
+                    <option>3–5 pessoas</option>
+                    <option>Grupo (6+)</option>
+                </select>
+            </div>
+            <button class="search__btn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <span>Explorar</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- THE STORY -->
+    <section class="story">
+        <div class="story__text">
+            <span class="story__label">O Nosso Manifesto</span>
+            <h2 class="story__title">Angola tem segredos<br>que merecem ser vividos.</h2>
+            <p class="story__body">A palavra <strong>Tunda</strong>, do Kikongo, significa <em>"Apareça"</em>. É um convite. Um chamado para quem sente que Angola é mais do que qualquer guia consegue descrever. Somos a ponte entre a sua curiosidade e as paisagens mais inesquecíveis do continente africano.</p>
+            <p class="story__body">Não organizamos pacotes. Criamos experiências à medida, com o cuidado de quem conhece cada picada e cada pôr do sol do país.</p>
+            <a href="sobreNos.html" class="btn-outline">Conheça a nossa história →</a>
+        </div>
+        <div class="story__mosaic">
+            <div class="mosaic__img mosaic__img--1">
+                <img src="../media/Serra da Leba.jpg" alt="Serra da Leba" loading="lazy">
+            </div>
+            <div class="mosaic__img mosaic__img--2">
+                <img src="../media/1.jpg" alt="Quedas de Kalandula" loading="lazy">
+            </div>
+            <div class="mosaic__img mosaic__img--3">
+                <img src="../media/Rectangle 22 (1).png" alt="Savana angolana" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section class="servicos">
+        <div class="servicos__header">
+            <span class="section-label">O Que Fazemos</span>
+            <h2 class="servicos__title">Três formas de<br>cuidar da sua viagem</h2>
+        </div>
+        <div class="servicos__grid">
+            <a href="servicos.html" class="servico-card">
+                <div class="servico-card__icon">
+                    <i class="fa-regular fa-compass"></i>
+                </div>
+                <h3>Consultoria<br>Personalizada</h3>
+                <p>Desenhamos o roteiro ideal com base no seu perfil, tempo disponível e orçamento.</p>
+                <span class="servico-card__link">Saber mais →</span>
+            </a>
+            <a href="servicos.html" class="servico-card servico-card--featured">
+                <div class="servico-card__icon">
+                    <i class="fa-regular fa-map"></i>
+                </div>
+                <h3>Curadoria de<br>Destinos e Rotas</h3>
+                <p>Seleção criteriosa dos melhores destinos, com informação atualizada e segura.</p>
+                <span class="servico-card__link">Saber mais →</span>
+            </a>
+            <a href="servicos.html" class="servico-card">
+                <div class="servico-card__icon">
+                    <i class="fa-solid fa-truck-monster"></i>
+                </div>
+                <h3>Suporte Logístico<br>e Guias Locais</h3>
+                <p>Viatura 4×4, guias certificados e apoio em terra para que não pense em mais nada.</p>
+                <span class="servico-card__link">Saber mais →</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- DESTINOS PREVIEW -->
+    <section class="destinos-preview">
+        <div class="destinos-preview__header">
+            <div>
+                <span class="section-label">Destinos em Destaque</span>
+                <h2 class="destinos-preview__title">Angola tem muito para mostrar.</h2>
+            </div>
+            <a href="destinos.html" class="btn-outline btn-outline--dark">Ver todos os destinos →</a>
+        </div>
+        <div class="destinos-preview__grid">
+            <a href="destinos.html" class="dest-card dest-card--large">
+                <img src="../media/1.jpg" alt="Quedas de Kalandula" loading="lazy">
+                <div class="dest-card__info">
+                    <span class="dest-badge">Malanje</span>
+                    <h3>Quedas de Kalandula</h3>
+                </div>
+                <div class="dest-card__hover">Planear esta rota →</div>
+            </a>
+            <a href="destinos.html" class="dest-card">
+                <img src="../media/Serra da Leba.jpg" alt="Serra da Leba" loading="lazy">
+                <div class="dest-card__info">
+                    <span class="dest-badge">Huíla</span>
+                    <h3>Serra da Leba</h3>
+                </div>
+                <div class="dest-card__hover">Planear esta rota →</div>
+            </a>
+            <a href="destinos.html" class="dest-card">
+                <img src="../media/fenda da tundavala.jpg" alt="Fenda da Tundavala" loading="lazy">
+                <div class="dest-card__info">
+                    <span class="dest-badge">Huíla</span>
+                    <h3>Tundavala</h3>
+                </div>
+                <div class="dest-card__hover">Planear esta rota →</div>
+            </a>
+            <a href="destinos.html" class="dest-card">
+                <img src="../media/Cabo_Ledo_2.png" alt="Cabo Ledo" loading="lazy">
+                <div class="dest-card__info">
+                    <span class="dest-badge">Luanda</span>
+                    <h3>Cabo Ledo</h3>
+                </div>
+                <div class="dest-card__hover">Planear esta rota →</div>
+            </a>
+        </div>
+    </section>
+
+    <!-- BLOG PREVIEW -->
+    <section class="blog-preview">
+        <div class="blog-preview__header">
+            <div>
+                <span class="section-label">Do Nosso Blog</span>
+                <h2>Conhecimento para viajar melhor.</h2>
+            </div>
+            <a href="blog.html" class="btn-outline btn-outline--dark">Ver todos os artigos →</a>
+        </div>
+        <div class="blog-preview__grid">
+            <a href="blog.html" class="blog-card">
+                <div class="blog-card__img">
+                    <img src="../media/Museu Nacional de Angola.jpeg" alt="Guia para fotografar Angola" loading="lazy">
+                    <span class="blog-card__tag">Fotografia</span>
+                </div>
+                <div class="blog-card__body">
+                    <time>6 Abr. 2026</time>
+                    <h3>Qual é o melhor ângulo para fotografar as quedas e como organizar a sua estadia</h3>
+                </div>
+            </a>
+            <a href="blog.html" class="blog-card">
+                <div class="blog-card__img">
+                    <img src="../media/How-to-do-a-Safari-in-Angola.jpg" alt="Destinos com origem" loading="lazy">
+                    <span class="blog-card__tag">Destinos</span>
+                </div>
+                <div class="blog-card__body">
+                    <time>14 Mar. 2026</time>
+                    <h3>Nem todas as paisagens têm origem num livro. Descubra quais destinos deve conhecer</h3>
+                </div>
+            </a>
+            <a href="blog.html" class="blog-card">
+                <div class="blog-card__img">
+                    <img src="../media/Rectangle 22.png" alt="Cores de Angola" loading="lazy">
+                    <span class="blog-card__tag">Guia</span>
+                </div>
+                <div class="blog-card__body">
+                    <time>28 Fev. 2026</time>
+                    <h3>Os melhores destinos para fotografar as cores surreais de Angola ao entardecer</h3>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="faq__header">
+            <span class="section-label">Perguntas Frequentes</span>
+            <h2>Tudo o que precisa saber<br>sobre o turismo em Angola</h2>
+        </div>
+        <div class="faq__container">
+            <details class="faq__item">
+                <summary class="faq__question">Qual a melhor época para visitar as paisagens naturais de Angola? <span class="seta"><i class="fa-solid fa-chevron-down"></i></span></summary>
+                <div class="faq__answer"><p>A melhor época é durante o Cacimbo (de Maio a Setembro). O clima é mais fresco e seco, o que facilita o acesso às estradas de terra batida e proporciona uma luz natural excelente para fotografia. Destinos como a Serra da Leba e a Fenda da Tundavala estão no seu melhor durante este período.</p></div>
+            </details>
+            <details class="faq__item">
+                <summary class="faq__question">O que significa "Tunda" e qual é a missão do projeto? <span class="seta"><i class="fa-solid fa-chevron-down"></i></span></summary>
+                <div class="faq__answer"><p>"Tunda" é uma palavra do Kikongo que significa <em>Apareça</em> ou <em>Seja Bem-vindo</em>. A missão do Tunda Angola é ser a ponte confiável de informação e curadoria para quem deseja explorar Angola com segurança, autenticidade e profundidade cultural.</p></div>
+            </details>
+            <details class="faq__item">
+                <summary class="faq__question">Como funciona a consultoria de viagem personalizada? <span class="seta"><i class="fa-solid fa-chevron-down"></i></span></summary>
+                <div class="faq__answer"><p>Após preencher o formulário de planeamento, a nossa equipa analisa o seu perfil de viajante, orçamento e datas disponíveis. Em 48 horas, recebe uma proposta de roteiro personalizada. Afinamos os detalhes em conjunto até que o plano seja exatamente aquilo que imagina.</p></div>
+            </details>
+            <details class="faq__item">
+                <summary class="faq__question">É seguro viajar pelo interior de Angola para fotografar? <span class="seta"><i class="fa-solid fa-chevron-down"></i></span></summary>
+                <div class="faq__answer"><p>Com a preparação certa, sim. As principais rotas turísticas estão estabilizadas e acessíveis. Trabalhamos com guias locais certificados que conhecem o terreno e garantimos sempre viatura 4×4 adequada para os percursos de maior exigência. A sua segurança é a nossa primeira prioridade.</p></div>
+            </details>
+            <details class="faq__item">
+                <summary class="faq__question">Estrangeiros precisam de visto para visitar Angola? <span class="seta"><i class="fa-solid fa-chevron-down"></i></span></summary>
+                <div class="faq__answer"><p>Sim, a maioria dos viajantes necessita de visto. Oferecemos suporte informativo sobre o processo de obtenção de vistos e documentação necessária. Recomendamos iniciar o processo com pelo menos 30 dias de antecedência. Consulte-nos para saber os requisitos específicos do seu país de origem.</p></div>
+            </details>
+        </div>
+        <a href="faq.html" class="btn-primary">Ver todas as perguntas</a>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
+        <div class="newsletter__inner">
+            <div class="newsletter__text">
+                <h2>Planeie a sua próxima<br>aventura connosco.</h2>
+                <p>Receba informações sobre destinos, épocas ideais e dicas exclusivas para tornar a sua viagem inesquecível.</p>
+            </div>
+            <div class="newsletter__form">
+                <div class="newsletter__input-wrap">
+                    <input type="email" placeholder="O seu endereço de e-mail">
+                    <button>Subscrever</button>
+                </div>
+                <p class="newsletter__note">Sem spam. Apenas Angola, da melhor forma.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="rodape">
+        <div class="rodape__marca">
+            <img src="../media/logo 1.png" alt="Tunda Angola" class="rodape__logo">
+            <p class="rodape__tagline">Onde a beleza lhe dá as boas-vindas.</p>
+            <div class="rodape__redes">
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <p class="copyright">© 2026 <span>Eva_Brandao</span>. All Rights Reserved</p>
+        </div>
+
+        <div class="rodape__col">
+            <h4>Explorar</h4>
+            <ul>
+                <li><a href="home.html">Início</a></li>
+                <li><a href="sobreNos.html">Sobre Nós</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="destinos.html">Destinos</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </div>
+
+        <div class="rodape__col">
+            <h4>Links Rápidos</h4>
+            <ul>
+                <li><a href="planeiaViagem.html">Planear Viagem</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="politicasPrivacidade.html">Políticas de Privacidade</a></li>
+                <li><a href="termosCondicoes.html">Termos e Condições</a></li>
+            </ul>
+        </div>
+
+        <div class="rodape__col rodape__contactos">
+            <h4>Contactos</h4>
+            <div class="contacto-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>Benfica, Luanda, Angola</p>
+            </div>
+            <div class="contacto-item">
+                <i class="fa-solid fa-envelope"></i>
+                <p>tendapaisagens@gmail.com</p>
+            </div>
+            <div class="contacto-item">
+                <i class="fa-brands fa-whatsapp"></i>
+                <p>+244 923 555 609</p>
+            </div>
+            <a href="contactos.html" class="btn-whatsapp">
+                <i class="fa-brands fa-whatsapp"></i> Falar no WhatsApp
+            </a>
+        </div>
+    </footer>
+
+    
+</body>
+</html>
